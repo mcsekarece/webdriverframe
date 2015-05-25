@@ -1,0 +1,1527 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.4 Auto Regression Canada Account">   
+  <parameter name="webSite" value="https://108.161.43.83:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="5555" />
+  <parameter name="browser" value="firefox" />
+  <parameter name="userAccount" value="US2000" />  
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  
+  <!-- Demographics.Cases Test -->
+  <test name="Demographics.Cases" parallel="methods" thread-count="12">
+	  <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+  
+     <!-- Demographics.Cases Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Cases.*"/>
+    </packages>
+  </test>
+  
+  <!-- Demographics.Consents Test -->
+  <test name="Demographics.Consents" parallel="methods" thread-count="12">
+	  <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+  
+     <!-- Demographics.Consents Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Consents.*"/>
+    </packages>
+  </test>  
+  
+  <!-- Demographics.Contacts Test -->
+  <test name="Demographics.Contacts" parallel="methods" thread-count="12">
+	  <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		    <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	</groups>
+	<!-- Demographics.Contacts Package -->      
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Contacts.*"/>
+    </packages>
+  </test>  
+  
+  <!-- Demographics Testcases HealthCareTeam -->
+  
+  <test name="Demographics.HealthCareTeam" parallel="methods" thread-count="12">  
+	<groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	</groups>  
+  <!-- Demographics Testcases HealthCareTeam -->
+  
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.HealthCareTeam.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.Household Test -->
+   
+   <test name="Demographics.Household" parallel="methods" thread-count="12">   
+	  <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+   
+  	<!-- Demographics.Household package -->   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Household.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Identifiers Test -->
+   
+   <test name="Demographics.Identifiers" parallel="methods" thread-count="12">
+	<groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	</groups>  
+   
+	<!-- Demographics.Identifiers package -->   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Identifiers.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Demographics.LoginPage Test -->
+      
+   <test name="Demographics.LoginPage" parallel="methods" thread-count="12">   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.LoginPage Package -->
+   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.LoginPage.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.MySettings Test -->
+   
+   <test name="Demographics.MySettings" parallel="methods" thread-count="12">
+   
+   <groups>	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.MySettings Package-->
+   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.MySettings.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Notes Test-->
+      
+   <test name="Demographics.Notes" parallel="methods" thread-count="12">
+	   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+   
+  <!-- Demographics.Notes Package-->    
+   <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Notes.*"/>
+   </packages>     
+   </test>
+   
+   <!-- Demographics.patientCheckinInfo Test-->
+   
+   <test name="Demographics.patientCheckinInfo" parallel="methods" thread-count="12">
+   
+   <groups>
+	     <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.patientCheckinInfo Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientCheckinInfo.*"/>
+      </packages>
+   </test>
+         
+   <!-- Demographics.Programs Test-->
+   
+   <test name="Demographics.Programs" parallel="methods" thread-count="12">
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups>  
+     
+  <!-- Demographics.Programs Package-->
+   
+   <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Programs.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Referral Test-->
+   
+   <test name="Demographics.Referral" parallel="methods" thread-count="12">   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups> 
+   
+  <!-- Demographics.Referral Package-->  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Referral.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.SignoutFlow Test-->
+   
+   <test name="Demographics.SignoutFlow" parallel="methods" thread-count="12">   
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups>     
+  <!-- Demographics.SignoutFlow Package -->
+     
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.SignoutFlow.*"/>
+      </packages>
+   </test>
+   
+  <!-- Demographics.SocioEconomic Test-->
+   
+   <test name="Demographics.SocioEconomic" parallel="methods" thread-count="12">
+   <groups>
+  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.SocioEconomic Package -->
+   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.SocioEconomic.*"/>
+  </packages>
+   </test>
+   
+  <!-- SystemSetting  Testcases -->  
+      
+  <!-- SystemSetting.AddressBook Test -->  
+      
+   <test name="Systemsettings.AddressBook" parallel="methods" thread-count="12">
+   
+   <groups>
+  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.AddressBook Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.AddressBook.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.Consents Test -->
+   
+   <test name="Systemsettings.Consents" parallel="methods" thread-count="12">
+   <groups>
+  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+    <!-- SystemSetting.Consents Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.Consents.*"/>
+    </packages>
+   </test>
+   
+   <!-- SystemSetting.Directories Test -->
+   
+   <test name="Systemsettings.Directories" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   <!-- SystemSetting.Directories Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.Directories.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.EnterpriseVariables Test -->
+   <test name="Systemsettings.EnterpriseVariables" parallel="methods" thread-count="12">
+   
+   <groups>
+  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.EnterpriseVariables Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.EnterpriseVariables.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.ExternalProviders Test -->
+   <test name="Systemsettings.ExternalProviders" parallel="methods" thread-count="12">
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+
+    <!-- SystemSetting.ExternalProviders Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.ExternalProviders.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.HealthCareTeam Test -->
+   <test name="Systemsettings.HealthCareTeam" parallel="methods" thread-count="12">
+   
+   <groups>	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.HealthCareTeam Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.HealthCareTeam.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.IdentifiersGroups Test -->
+   <test name="Systemsettings.IdentifiersGroups" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>
+	  
+   <!-- SystemSetting.IdentifiersGroups Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.IdentifiersGroups.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.IdentifiersTypes Test -->
+   <test name="Systemsettings.IdentifiersTypes" parallel="methods" thread-count="12">
+   
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+	
+   <!-- SystemSetting.IdentifiersTypes Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.IdentifiersTypes.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.MandatoryFields Test -->
+   <test name="Systemsettings.MandatoryFields" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+	
+   <!-- SystemSetting.MandatoryFields Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.MandatoryFields.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.PasswordRules Test -->
+   <test name="Systemsettings.PasswordRules" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.PasswordRules Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.PasswordRules.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.PatientImport Test -->
+   <test name="Systemsettings.PatientImport" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   <!-- SystemSetting.PatientImport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.PatientImport.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.UserRoles Test -->
+   <test name="Systemsettings.UserRoles" parallel="methods" thread-count="12">   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.UserRoles Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.UserRoles.*"/>
+      </packages>
+   </test>
+    
+   <!-- Clincal List, CQM  Testcases -->
+     
+   <test name="clinicalLists" parallel="methods" thread-count="12">   
+   <groups>	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+	   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.Common.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.MatchAll.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.MatchDoNotInclude.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.MatchOneOrMore.*"/>
+     </packages>
+   </test>  
+   
+  <!-- Cds Alerts, MU Measure and MedInteraction Testcases -->
+   
+   <!-- Clinicalsettings.CdsAlerts Test -->
+   <test name="clinicalsettings.CdsAlerts" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.CdsAlerts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.CdsAlerts.*"/>
+      </packages>
+   </test>
+   
+  <!-- Clinicalsettings.MedInteractionWarning Test -->
+   <test name="Clinicalsettings.MedInteractionWarning" parallel="methods" thread-count="12">
+   
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.MedInteractionWarning Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MedInteractionWarning.*"/>
+      </packages>
+   </test>
+  
+   
+   <!-- Chartprevisit  Testcases -->
+   
+   <!-- Chartprevisit.Allergies Test -->
+   <test name="Chartprevisit.Allergies" parallel="methods" thread-count="12">
+   <groups>	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Allergies Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.CcdExport Test -->
+   <test name="Chartprevisit.CcdExport" parallel="methods" thread-count="12">
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.CcdExport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.CcdExport.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.EncounterAddEdit Package -->
+   <test name="Chartprevisit.EncounterAddEdit" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.EncounterAddEdit Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterAddEdit.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.EncounterOverall test -->
+   <test name="Chartprevisit.EncounterOverall" parallel="methods" thread-count="12">
+   <groups>	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   <!-- Chartprevisit.EncounterOverall Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterOverall.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.FamilyHistory Test -->
+   <test name="Chartprevisit.FamilyHistory" parallel="methods" thread-count="12">
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>     
+	
+   <!-- Chartprevisit.FamilyHistory Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.FamilyHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.GrowthCharts Test -->
+   <test name="Chartprevisit.GrowthCharts" parallel="methods" thread-count="12">
+   
+   <groups>	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.GrowthCharts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.GrowthCharts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Immunization Test -->
+   <test name="Chartprevisit.Immunization" parallel="methods" thread-count="12">
+   <groups>
+     
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Immunization Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Immunization.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Injection Test -->
+   <test name="Chartprevisit.Injection" parallel="methods" thread-count="12">
+   <groups>
+	    <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Injection Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Injection.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.LabReportQueue Test -->
+   <test name="Chartprevisit.LabReportQueue" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  	
+   
+   <!-- Chartprevisit.LabReportQueue Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabReportQueue.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.LabResultFillingManual Test -->
+   <test name="Chartprevisit.LabResultFillingManual" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.LabResultFillingManual Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabResultFillingManual.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedicalAndSurgicalHistory Test -->
+   <test name="Chartprevisit.MedicalAndSurgicalHistory" parallel="methods" thread-count="12">
+   <groups>
+	     <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.MedicalAndSurgicalHistory Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedicalAndSurgicalHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Medication Test -->
+   <test name="Chartprevisit.Medication" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Medication Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Medication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedsQueue test -->
+   <test name="Chartprevisit.MedsQueue" parallel="methods" thread-count="12">
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.MedsQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedsQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedWarnings test -->
+   <test name="Chartprevisit.MedWarnings" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>     
+   
+   <!-- Chartprevisit.MedWarnings package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedWarnings.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.OrderLabDiReferral test -->
+   <test name="Chartprevisit.OrderLabDiReferral" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.OrderLabDiReferral Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.OrderLabDiReferral.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PatientHandOuts test -->
+   <test name="Chartprevisit.PatientHandOuts" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.PatientHandOuts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientHandOuts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PatientMeds test -->
+   <test name="Chartprevisit.PatientMeds" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.PatientMeds package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientMeds.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PrescribeMedication test -->
+   <test name="Chartprevisit.PrescribeMedication" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.PrescribeMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PrescribeMedication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.ProblemList test -->
+   <test name="Chartprevisit.ProblemList" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.ProblemList package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ProblemList.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.ProviderHomePage test -->
+   <test name="Chartprevisit.ProviderHomePage" parallel="methods" thread-count="12">
+   <groups>
+	  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.ProviderHomePage Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ProviderHomePage.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.QuickList test -->
+   <test name="Chartprevisit.QuickList" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.QuickList package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.QuickList.*"/>
+      </packages>
+   </test>
+   
+   
+   
+   <!-- Chartprevisit.SocialHistory test -->
+   <test name="Chartprevisit.SocialHistory" parallel="methods" thread-count="12">
+   <groups>  
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.SocialHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SocialHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Task test -->
+   <test name="Chartprevisit.Task" parallel="methods" thread-count="12">
+   
+   <groups>
+	     
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Task package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Task.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.UnsignedEncounterQueue test -->
+   <test name="Chartprevisit.UnsignedEncounterQueue" parallel="methods" thread-count="12">
+   <groups>	     
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>
+   
+   <!-- Chartprevisit.UnsignedEncounterQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.UnsignedEncounterQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Vitals test -->
+   <test name="Chartprevisit.Vitals" parallel="methods" thread-count="12">
+   <groups>	     
+	   <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CanadaAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CanadaAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Chartprevisit.Vitals package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Vitals.*"/>
+      </packages>
+   </test>  
+  
+</suite>

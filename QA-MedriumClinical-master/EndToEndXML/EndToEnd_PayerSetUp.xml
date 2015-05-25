@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia End To End Payer SetUp Scripts for US Account">
+  <parameter name="webSite" value="https://nexiaemr.com/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="US2000"/>
+  <parameter name="seleniumHost" value="10.33.3.87"/>
+  <parameter name="seleniumPort" value="4445"/>
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  
+  <test name="Nexia" parallel="classes" thread-count="1">  
+  <classes>
+      <class name="com.nexia.selenium.testscripts.section.billing.endtoendtestingDataSetUp.CreatePayersForEndToEnd">
+        <methods>
+          <include name="CreatePayersForEndToEnd" invocation-numbers="0"/>
+        </methods>
+      </class>    
+                  
+   </classes> 
+   </test>  
+</suite>

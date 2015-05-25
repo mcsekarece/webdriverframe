@@ -1,0 +1,71 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.4 Regression US Account- CQM">
+  <parameter name="webSite" value="https://10.33.1.74:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="qb1486" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+     
+   
+   <test name="clinicalLists.ClinicalQualityMeasure" parallel="classes" thread-count="1">   
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+	   
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.ClinicalQualityMeasures.*"/>      
+    </packages>
+   </test>
+   
+  <!-- MU Measure -->
+        
+   
+   <test name="clinicalsettings.MUMeasures" parallel="classes" thread-count="1">
+   
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.MUMeasures Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MUMeasures.*"/>
+      </packages>
+   </test>
+      
+   
+</suite>

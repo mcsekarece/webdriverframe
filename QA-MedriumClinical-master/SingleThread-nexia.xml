@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.3 SingleThread testcases"> 
+  <parameter name="webSite" value="http://nexia-qa1.nightingalemd.com:8080/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="qb1486" />
+      
+  <test name="Nexia SingleThread Only" parallel="methods" thread-count="1">  
+  <groups>		      
+	<run>
+	   <include name="SingleThread"/>
+	   <exclude name="Review"/>
+	</run>
+	
+  </groups>   
+  <packages>
+ 
+  <!-- SystemSetting  Testcases -->  
+  <package name="com.nexia.selenium.testscripts.section.systemsettings.*"/>  
+  <!-- Clincal List, MU and CQM  Testcases -->
+  <package name="com.nexia.selenium.testscripts.section.clinicalLists.*"/>
+  <package name="com.nexia.selenium.testscripts.section.clinicalsettings.*"/>
+  <!-- Charprevisit Testcases -->
+   <package name="com.nexia.selenium.testscripts.section.chartprevisit.*"/>
+   
+  </packages>
+  </test> <!-- Nexia --> 
+   
+</suite>

@@ -1,0 +1,468 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.7 Auto Regression US Account" preserve-order="false" parallel="tests" thread-count="15">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="US2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+      
+   <!-- Billing testcase --> 
+     
+   <!-- Billing.adjustmentCodes test -->
+   <test name="Billing.AdjustmentCodes" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.adjustmentCodes package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.adjusmentCodes.*"/>
+      </packages>
+   </test>   
+      
+   <!-- Billing.adminStatement test -->
+   <test name="Billing.adminStatement" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.adjustmentCodes package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.adminstatement.*"/>
+      </packages>
+   </test>
+   
+    <!-- Billing.batch_eligibility test -->
+   <test name="Billing.batch_eligibility" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.batch_eligibility package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.batch_eligibility.*"/>
+      </packages>
+   </test>
+   
+    <!-- Billing.batchstatement test -->
+   <test name="Billing.batchstatement" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.adjustmentCodes package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.batchstatement.*"/>
+      </packages>
+   </test>
+  
+     
+   <!-- Billing.batchHistory test -->
+   <test name="Billing.batchHistory" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.billingHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.billingHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.catchEntry -->
+   <test name="Billing.ChargeEntry" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.ChargeEntryHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.chargeentry.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.catchEntryWorkQueue -->
+   <test name="Billing.ChargeEntryWorkQueue" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.ChargeEntryWorkQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.chargeentryworkqueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.feeSchedule -->
+   <test name="Billing.feeSchedule" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.feeSchedule package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.feeSchedule.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.payer Payments -->
+   <test name="Billing.payer_payments" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.payer_Payment -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.payer_payments.*"/>
+      </packages>
+   </test>                                         
+   
+   <!-- Billing.post patientPayment -->
+   <test name="Billing.postpatientpayments" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.postpatientPayment -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.postpatientpayments.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.serviceCode -->
+   <test name="Billing.serviceCode" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.serviceCode -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.serviceCode.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.statement_batch_review -->
+   <test name="Billing.statement_batch_review" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statement_batch_review -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.statement_batch_review.*"/>
+      </packages>
+   </test>
+   
+<!-- Billing.statementPreferences -->
+   <test name="Billing.statementPreferences" parallel="methods" thread-count="9">
+   <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statementpreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.statementpreferences.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.superbillentry -->
+   <test name="Billing.superbillentry" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statementpreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.superbillentry.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.superBillSetUp -->
+   <test name="Billing.superBillSetUp" parallel="methods" thread-count="9">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statementpreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.superBillSetUp.*"/>
+    </packages>
+   </test>     
+
+</suite>

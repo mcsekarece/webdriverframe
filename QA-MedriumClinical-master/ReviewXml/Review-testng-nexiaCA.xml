@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.7 Auto Review Only testcases - CA Account @10.33.2.159">
+ 
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="10.33.2.159" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="CA2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+    
+  <test name="Nexia ReviewOnly" parallel="methods" thread-count="7">
+  
+  <groups>		      
+	<run>
+	   <include name="Review"/>	   
+	</run>
+  </groups>  
+  	   
+  <packages> 
+  
+ 	<package name="com.nexia.selenium.testscripts.section.smoketest.*"/>	  
+	<!-- Demographics Testcases -->
+	<package name="com.nexia.selenium.testscripts.section.demographics.*"/>	    
+	<!-- Clincal List, MU and CQM  Testcases -->
+	<package name="com.nexia.selenium.testscripts.section.clinicalLists.*"/>
+	<package name="com.nexia.selenium.testscripts.section.clinicalsettings.*"/>	  
+	<!-- Charprevisit Testcases -->
+	<package name="com.nexia.selenium.testscripts.section.chartprevisit.*"/>	   
+	<!-- taskManagment.PatientTask Testcases -->
+	<package name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.*"/>
+	<!-- TemplateSetup daySheet Template -->
+	<package name="com.nexia.selenium.testscripts.section.templateSetup.daysheettemplate.*"/>	       	 
+    <package name="com.nexia.selenium.testscripts.section.schedulingsettings.*"/> 
+    <package name="com.nexia.selenium.testscripts.section.systemsettings.*"/>     
+   
+  </packages>
+  </test>    
+</suite>

@@ -1,0 +1,290 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.7 Auto Regression US Account" preserve-order="false" parallel="tests">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="US2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+   <test name="clinicalLists.ClinicalQualityMeasure" parallel="classes" thread-count="1">
+   <!-- Execute @Marqaa06 Single Threaded-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="4445" />   
+   <groups>		      
+	 <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	 </run>
+   </groups>
+	   
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.ClinicalQualityMeasures.*"/>      
+    </packages>
+   </test>
+  
+  
+   <!-- Demographics.patientCheckinInfo Test-->
+   
+   <test name="demographics.patientCheckinInfo" parallel="classes" thread-count="1">
+      <!-- Execute at Marqaa06 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="4445" />   
+   <groups>
+	     <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.patientCheckinInfo Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientCheckinInfo.*"/>
+      </packages>
+   </test>
+   
+      
+  <!-- Demographics.SocioEconomic Test-->
+   
+     
+ <!-- File Documents Testcases-->
+   
+  <test name="fileDocuments" parallel="classes" thread-count="1">
+  <!-- Execute at @Marqaa06 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="7777" />  
+  <groups>		      
+	 <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	 </run>
+   </groups>   
+ 
+ <!-- fileDocuments Package -->
+   <packages>	  
+	   <package name="com.nexia.selenium.testscripts.section.filedocuments.*"/>   
+    </packages>   
+  </test>  
+    
+   <!-- Clincal List, CQM  Testcases -->
+     
+   
+   <test name="clinicalsettings.MedInteractionWarning" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa06 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="8888" /> 
+   <groups>	  
+   
+       <define name="SingleThread">    
+	      <include name="SingleThread"/>           
+	   </define>	     
+	   
+	   <define name="SingleThread">    
+	      <include name="SingleThreadUS"/>           
+	   </define>	     
+    		      
+	 
+	    <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	      <include name="SingleThread"/>      
+	      <include name="SingleThreadUS"/>	      
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.MedInteractionWarning Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MedInteractionWarning.*"/>
+      </packages>
+   </test>   
+   
+   <test name="clinicalsettings.MUMeasures" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa06 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="7777" /> 
+   <groups>	  
+   
+       <define name="SingleThread">    
+	      <include name="SingleThread"/>           
+	   </define>	     
+	   
+	   <define name="SingleThread">    
+	      <include name="SingleThreadUS"/>           
+	   </define>	     
+    		      
+	 
+	    <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	      <include name="SingleThread"/>      
+	      <include name="SingleThreadUS"/>	      
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.MUMeasures Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MUMeasures.*"/>
+      </packages>
+   </test>
+
+   <!-- Clinical settings Encounter Template Package -->
+
+   <test name="clinicalsettings.Encounter Template" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa06 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="8888" /> 
+   <groups>	  
+   <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	</run>
+       
+   </groups>  
+   
+   <!-- Clinicalsettings.encounter Template Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.encounterTemplate.*"/>
+      </packages>
+   </test>
+			
+  <!-- TemplateSetup daySheetTemplate test -->
+   <test name="TemplateSetup DaySheetTemplate" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa06 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="4445" /> 
+   <groups>	     
+   	<run>	
+    	<include name="SingleThread"/>
+    	<include name="SingleThreadUS"/>
+   	</run>	  
+   </groups>
+   				
+    <!-- com.nexia.selenium.testscripts.section.templateSetup.daySheetTemplate -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.templateSetup.daysheettemplate.*"/>
+      </packages>
+   </test>      
+   
+ <!-- Chartprevisit  Testcases -->     		
+   			
+   
+ <!-- Chartprevisit Allergies SingleThread Test -->
+   <test name="chartprevisit Allergies SingleThread" parallel="classes" thread-count="1">
+   <!-- Execute at @Marqaa06 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="4445" />
+   <groups>	  
+	  <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	</run> 
+   </groups>  
+   
+   <!-- Chartprevisit.Allergies Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.*"/>
+      </packages>
+   </test>
+   
+   
+   <!-- Chartprevisit PrescribeMedication Single -->
+   <test name="chartprevisit PrescribeMedication Single" parallel="classes" thread-count="1">
+   <!-- Execute at @Marqaa06 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="8888" />
+   <groups>  
+    <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+   </run>
+   </groups>  
+   
+   <!-- Chartprevisit.PrescribeMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PrescribeMedication.*"/>
+      </packages>
+   </test>
+   
+   <!-- schedulingsettings.PDGQueue -->
+
+  <test name="schedulingsettings.PDGQueue" parallel="classes" thread-count="1">
+    <!-- Execute at Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="7777" />
+       
+   <groups>	     
+      <run>
+         <include name="SingleThread"/>
+         <include name="SingleThreadUS"/>
+       </run>	  
+   </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.schedulingsettings.pDGQueue -->
+    <packages>
+       <package name="com.nexia.selenium.testscripts.section.schedulingsettings.pDGQueue.*"/>
+    </packages>
+  </test>
+
+  <!-- schedulingsettings.PDGRecordAttendance -->
+  <test name="schedulingsettings.PDGRecordAttendance" parallel="classes" thread-count="1">
+    <!-- Execute at Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.90" />
+   <parameter name="seleniumPort" value="7777" />    
+   <groups>	     
+  	   <run>
+    		<include name="SingleThread"/>
+    		<include name="SingleThreadUS"/>
+   		</run>	  
+   </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.schedulingsettings.pDGRecordAttendance-->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.pDGRecordAttendance.*"/>
+    </packages>
+ </test>   
+     
+     
+     
+
+</suite>

@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nexia AdvanceSmoke Test Production - US Account">
+  <parameter name="webSite" value="https://nexiaemr.com/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="seleniumHost" value="10.33.3.87"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <parameter name="userAccount" value="qb1486" />   
+  <test name="Nexia" parallel="methods" thread-count="8">  
+    <groups>  
+		   <define name="US">    
+		      <include name="AdvancedSmokeUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="AdvancedSmoke"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	</groups>  
+    
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.*"/>
+      <package name="com.nexia.selenium.testscripts.section.demographics.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.*"/>      
+    </packages>
+    
+  </test> <!-- Nexia -->
+</suite> <!-- [Nexia AdvanceSmoke Test QA2 - US Account] -->

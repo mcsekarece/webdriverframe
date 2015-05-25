@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia SetUp Scripts (Portability scripts) for QA6 (1.6 Release) - Canada Account">
+  <parameter name="webSite" value="https://10.33.1.78:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="CA2000"/>
+  <parameter name="seleniumHost" value="10.33.3.87"/>
+  <parameter name="seleniumPort" value="6666"/>
+   <test name="Nexia" parallel="classes" thread-count="5">
+    <groups>	  
+   
+	    <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CAAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CAAccount"/>
+	    </run>
+	</groups>  
+  
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.portability.*"/>
+    </packages>
+  </test> 
+</suite> <!-- [Nexia Setup/Portability Scripts for QA6 (1.6 build) - Canada Account] -->

@@ -1,0 +1,3261 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 2.1 Auto Regression US Account">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="US2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+   
+  <!-- Demographics.Cases Test -->
+  <test name="Demographics.Cases" parallel="methods" thread-count="19">  
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />	   
+	   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>  	   
+  
+     <!-- Demographics.Cases Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Cases.*"/>
+    </packages>
+  </test> 
+   
+  <!-- Demographics.Consents Test -->
+  <test name="demographics.Consents" parallel="methods" thread-count="19">
+  
+ <!-- Execute at @Marqaa06 Multiple Threads -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+	  <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>  
+  
+     <!-- Demographics.Consents Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Consents.*"/>
+    </packages>
+  </test>  
+  
+  <!-- Demographics.Contacts Test -->
+  <test name="demographics.Contacts" parallel="methods" thread-count="19">
+   <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+	  <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		    <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	</groups>
+	<!-- Demographics.Consents Package -->      
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Contacts.*"/>
+    </packages>
+  </test>  
+  
+  <!-- Demographics Testcases HealthCareTeam -->
+    
+  <test name="demographics.HealthCareTeam" parallel="methods" thread-count="19">
+  <!-- Execute at @Marqaa06 Multiple Threads-->
+  <parameter name="seleniumHost" value="10.33.2.159" />
+  <parameter name="seleniumPort" value="4444" />  
+	<groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	</groups>  
+  <!-- Demographics Testcases HealthCareTeam -->
+  
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.HealthCareTeam.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.Household Test -->
+   
+   <test name="demographics.Household" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />    
+	  <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>  
+   
+  	<!-- Demographics.Household package -->   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Household.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Identifiers Test -->
+   
+   <test name="demographics.Identifiers" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+	<groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	</groups>  
+   
+	<!-- Demographics.Identifiers package -->   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Identifiers.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Demographics.LoginPage Test -->
+      
+   <test name="demographics.LoginPage" parallel="methods" thread-count="19">
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.LoginPage Package -->
+   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.LoginPage.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.MySettings Test -->
+   
+   <test name="demographics.MySettings" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.MySettings Package-->
+   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.MySettings.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Notes Test-->
+      
+   <test name="demographics.Notes" parallel="methods" thread-count="19">
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+	   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define> 
+		  
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>  
+   
+  <!-- Demographics.Notes Package-->    
+   <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Notes.*"/>
+   </packages>     
+   </test>
+   
+    
+   <!-- Demographics.patientSearch Test-->
+   
+   <test name="demographics.patientSearch" parallel="methods" thread-count="19">
+   
+   <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>
+	     <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+    <!-- Demographics.patientSearch Package-->
+    
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientSearch.*"/>
+     </packages>
+   </test>   
+   
+   <!-- Demographics.patientTimeLine Test-->   
+   <test name="demographics.patientTimeLine" parallel="methods" thread-count="19">
+   
+   <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>
+	     <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.patientTimeLine Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientTimeLine.*"/>
+      </packages>
+   </test>
+   
+      
+   <!-- Demographics.Payers Test-->   
+   <test name="demographics.Payers" parallel="methods" thread-count="19">
+   
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>
+	     <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.payers Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Payers.*"/>
+      </packages>
+   </test>         
+
+   <!-- Demographics.Programs Test-->
+   
+   <test name="demographics.Programs" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+     
+  <!-- Demographics.Programs Package-->
+   
+   <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Programs.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Referral Test-->
+   
+   <test name="demographics.Referral" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups> 
+   
+  <!-- Demographics.Referral Package-->  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Referral.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.SignoutFlow Test-->
+   
+   <test name="demographics.SignoutFlow" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>     
+  <!-- Demographics.SignoutFlow Package -->
+     
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.SignoutFlow.*"/>
+      </packages>
+   </test>
+   
+  <!-- Demographics.SocioEconomic Test-->
+   
+   <test name="demographics.SocioEconomic" parallel="methods" thread-count="19">
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>  
+   
+  <!-- Demographics.SocioEconomic Package -->
+   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.SocioEconomic.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.unfinishedItem Test-->
+   
+   <test name="demographics.unfinishedItem" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+  </groups>     
+  <!-- demographics.unfinishedItem Package -->   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.unfinishedItem.*"/>
+  </packages>
+  </test>   
+ 
+  <!-- SystemSetting  Testcases -->  
+      
+  <!-- SystemSetting.AddressBook Test -->  
+      
+   <test name="systemsettings.AddressBook" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>
+  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.AddressBook Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.addressbook.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.Consents Test -->
+   
+   <test name="systemsettings.Consents" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+    <!-- SystemSetting.Consents Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.consents.*"/>
+    </packages>
+   </test>
+   
+   <!-- SystemSetting.Directories Test -->
+   
+   <test name="systemsettings.Directories" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   <!-- SystemSetting.Directories Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.directories.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.EnterpriseVariables Test -->
+   <test name="systemsettings.EnterpriseVariables" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.EnterpriseVariables Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.enterprise_Variables.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.ExternalProviders Test -->
+   <test name="systemsettings.ExternalProviders" parallel="methods" thread-count="19">
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+
+    <!-- SystemSetting.ExternalProviders Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.externalproviders.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.HealthCareTeam Test -->
+   <test name="systemsettings.HealthCareTeam" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.HealthCareTeam Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.healthcareteam.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.IdentifiersGroups Test -->
+   <test name="systemsettings.IdentifiersGroups" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+	  
+   <!-- SystemSetting.IdentifiersGroups Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.identifiersgroups.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.IdentifiersTypes Test -->
+   <test name="systemsettings.IdentifiersTypes" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+	
+   <!-- SystemSetting.IdentifiersTypes Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.identifierstypes.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.MandatoryFields Test -->
+   <test name="systemsettings.MandatoryFields" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+	
+   <!-- SystemSetting.MandatoryFields Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.mandatoryfields.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.OrganizationalStructure Test -->
+   <test name="systemsettings.OrganizationalStructures" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.OrganizationalStructure Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.OrganizationalStructures.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.OrganizationalStructures.AdminPractice.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.OrganizationalStructures.AssociatedPayer.*"/>
+     </packages>
+   </test>
+   
+   <!-- SystemSetting.PasswordRules Test -->
+   <test name="systemsettings.PasswordRules" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.PasswordRules Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.passwordrules.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.PatientImport Test -->
+   <test name="systemsettings.PatientImport" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   <!-- SystemSetting.PatientImport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.patientimport.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.UserRoles Test -->
+   <test name="systemsettings.UserRoles" parallel="methods" thread-count="19">
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- SystemSetting.UserRoles Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.userroles.*"/>
+      </packages>
+   </test>    
+         
+    
+    
+   <!-- Clincal List, CQM  Testcases -->
+     
+   <test name="clinicalLists" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+	   
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.common.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.matchAll.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.matchDoNotInclude.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.matchOneOrMore.*"/>      
+     </packages>
+ </test>
+ 
+        
+ <test name="MedicationReconciliation" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+	   
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.medicationReconciliation.*"/>
+     </packages>
+</test>    
+
+
+ <!-- Cds Alerts, MU Measure and MedInteraction Testcases -->
+   
+   <!-- Clinicalsettings.CdsFlow Sheets Test -->
+   <test name="clinicalsettings.cdmflowsheets" parallel="methods" thread-count="19">
+   
+ <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+	   
+   <!-- Clinicalsettings.CdmFlowSheets Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Clinicalsettings.CdsAlerts Test -->
+   <test name="clinicalsettings.CdsAlerts" parallel="methods" thread-count="19">
+   
+ <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.CdsAlerts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.cdsAlerts.*"/>
+      </packages>
+   </test>         
+   
+   <!-- Scheduling Settings Package -->
+    
+   <!-- schedulingsettings.CalendarPreferences test -->
+   <test name="schedulingsettings.CalendarPreferences" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.CalendarPreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.CalendarPreferences.*"/>
+      </packages>
+   </test>
+
+   <!-- schedulingsettings.CalendarTemplates test -->
+   <test name="schedulingsettings.CalendarTemplates" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.CalendarTemplates -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.CalendarTemplates.*"/>
+      </packages>
+   </test>
+
+ <!-- schedulingsettings.LocationHours test -->
+   <test name="schedulingsettings.LocationHours" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.LocationHours -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.LocationHours.*"/>
+      </packages>
+   </test>
+
+<!-- schedulingsettings.NonProviderResources test -->
+   <test name="schedulingsettings.NonProviderResources" parallel="methods" thread-count="19">
+      <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />    
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.NonProviderResources -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.NonProviderResources.*"/>
+      </packages>
+</test> 
+  
+
+<!-- schedulingsettings.ResourceGroups test -->
+   <test name="schedulingsettings.ResourceGroups" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.ResourceGroups -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.ResourceGroups.*"/>
+      </packages>
+   </test>
+
+<!-- schedulingsettings.VisitGroups test -->
+   <test name="schedulingsettings.VisitGroups" parallel="methods" thread-count="19">
+   
+ <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.VisitGroups -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.VisitGroups.*"/>
+      </packages>
+   </test>
+
+<!-- schedulingsettings.VisitTypes test -->
+   <test name="schedulingsettings.VisitTypes" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- schedulingsettings.VisitTypes -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.VisitTypes.*"/>
+      </packages>
+   </test>      
+
+
+  <test name="clinicalsettings.MedInteractionWarning" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa01 Single Thread-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4445" /> 
+   <groups>	  
+   
+       <define name="SingleThread">    
+	      <include name="SingleThread"/>           
+	   </define>	     
+	   
+	   <define name="SingleThread">    
+	      <include name="SingleThreadUS"/>           
+	   </define>	     
+    		      
+	 
+	    <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	      <include name="SingleThread"/>      
+	      <include name="SingleThreadUS"/>	      
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.MedInteractionWarning Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MedInteractionWarning.*"/>
+      </packages>
+   </test>   
+      
+   <!-- Clinical settings Encounter Template Package -->
+
+   <test name="clinicalsettings.Encounter Template" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa06 Single Thread-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4445" /> 
+   <groups>	  
+   <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	</run>
+       
+   </groups>  
+   
+   <!-- Clinicalsettings.encounter Template Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.encounterTemplate.*"/>
+      </packages>
+   </test>  
+
+ <!-- TaskManagment PatientTask test -->
+
+   <test name="TaskManagment PatientTask" parallel="methods" thread-count="19">
+   <!-- Execute at Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+    
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.taskManagment.PatientTask -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.*"/>
+      </packages>
+   </test>   
+   
+  <!-- TemplateSetup daySheetTemplate test -->
+   <test name="TemplateSetup DaySheetTemplate" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa04 Single Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4445" /> 
+   <groups>	     
+   	<run>
+    	<include name="SingleThread"/>
+    	<include name="SingleThreadUS"/>
+   	</run>	  
+   </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.templateSetup.daySheetTemplate -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.templateSetup.daysheettemplate.*"/>
+      </packages>
+   </test>			
+   
+   <!-- Chartprevisit  Testcases -->
+      		
+   <!-- Chartprevisit.Allergies Test -->
+   <test name="chartprevisit.Allergies" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    	
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  		
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  		
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   			
+   <!-- Chartprevisit.Allergies Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.*"/>
+      </packages>
+   </test>	
+   
+   <!-- Chartprevisit Allergies SingleThread Test -->
+   <test name="chartprevisit Allergies SingleThread" parallel="classes" thread-count="1">
+   <!-- Execute at @Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4445" />
+   <groups>	  
+	  <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	</run> 
+   </groups>  
+   
+   <!-- Chartprevisit.Allergies Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.*"/>
+      </packages>
+   </test>   
+    
+   <!-- Chartprevisit.CcdExport Test -->
+   <test name="chartprevisit.CcdExport" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.CcdExport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.CcdExport.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.ChartDisclosure Test -->
+   <test name="chartprevisit.ChartDisclosure" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.ChartDisclosure Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ChartDisclosure.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.CorrespondenceReport Test -->
+   <test name="chartprevisit.CorrespondenceReport" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.CorrespondenceReport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.correspondencereport.*"/>
+      </packages>
+  </test>
+  
+   <!-- Chartprevisit.CoSign Test -->
+   <test name="chartprevisit.CoSign" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.CoSign Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.cosign.*"/>
+      </packages>
+   </test>
+   
+   
+  <!-- Chartprevisit CustomizationSummary Package -->
+   <test name="Chartprevisit CustomizationSummary" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit CustomizationSummary -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.CustomizationSummary.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit DiagnosticTestReport Package -->
+   <test name="Chartprevisit DiagnosticRestReport" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit DiagnosticTestReport -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.diagnostictestreport.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit EMRSecurity Package -->
+   <test name="Chartprevisit EMRSecurity" parallel="methods" thread-count="19">
+   <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit EMRSecurity -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EMRSecurity.*"/>
+      </packages>
+   </test>
+   
+   
+    <!-- Chartprevisit.EncounterAddEdit Package -->
+   <test name="chartprevisit.EncounterAddEdit" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.EncounterAddEdit Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterAddEdit.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.EncounterOverall test -->
+   <test name="chartprevisit.EncounterOverall" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   <!-- Chartprevisit.EncounterOverall Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterOverall.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.EncounterQueue test -->
+   <test name="chartprevisit.EncounterQueue" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   <!-- Chartprevisit.Queue Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterQueue.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.EncounterReference test -->
+   <test name="chartprevisit.EncounterReference" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   <!-- Chartprevisit.Reference Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterReference.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.EncounterRunWizard test -->
+   <test name="chartprevisit.EncounterRunWizard" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   <!-- Chartprevisit.EncounterRunWizard Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterRunWizard.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit ExportCapabilities test -->
+   <test name="chartprevisit.ExportCapabilities" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		<define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+     <!-- Chartprevisit ExportCapabilities Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.exportcapabilities.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.FamilyHistory Test -->
+   <test name="chartprevisit.FamilyHistory" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>     
+	
+   <!-- Chartprevisit.FamilyHistory Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.FamilyHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.GrowthCharts Test -->
+   <test name="chartprevisit.GrowthCharts" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.GrowthCharts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.GrowthCharts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Immunization Test -->
+   <test name="chartprevisit.Immunization" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>
+     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Immunization Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Immunization.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Injection Test -->
+   <test name="chartprevisit.Injection" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+	    <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Injection Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Injection.*"/>
+      </packages>
+   </test>
+   
+  <!-- Chartprevisit.LabReFile Test -->
+   <test name="chartprevisit.LabReFile" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.LabReFile Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabReFile.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.LabReportQueue Test -->
+   <test name="chartprevisit.LabReportQueue" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  	
+   
+   <!-- Chartprevisit.LabReportQueue Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabReportQueue.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Chartprevisit.LabRequisition Test -->
+   <test name="chartprevisit.LabRequisition" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+      
+   <!-- Chartprevisit.LabRequisition Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabRequisition.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.LabResult Test -->
+   <test name="chartprevisit.LabResult" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+      
+   <!-- Chartprevisit.LabResult Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabResult.*"/>
+      </packages>
+   </test>
+   
+   
+    <!-- Chartprevisit.LabResultFillingManual Test -->
+   <test name="chartprevisit.LabResultFillingManual" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.LabResultFillingManual Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabResultFillingManual.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedicalAndSurgicalHistory Test -->
+   <test name="chartprevisit.MedicalAndSurgicalHistory" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>
+	     <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.MedicalAndSurgicalHistory Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedicalAndSurgicalHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Medication Test -->
+   <test name="chartprevisit.Medication" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.Medication Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Medication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedsQueue test -->
+   <test name="chartprevisit.MedsQueue" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.MedsQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedsQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedWarnings test -->
+   <test name="chartprevisit.MedWarnings" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>     
+   
+   <!-- Chartprevisit.MedWarnings package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedWarnings.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Chartprevisit.MergeCharts test -->
+   <test name="chartprevisit.MergeCharts" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>   
+   
+   <!-- Chartprevisit.MergeCharts package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MergeCharts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.NotifyMeIn test -->
+   <test name="chartprevisit.NotifyMeIn" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>   
+   
+   <!-- Chartprevisit.NotifyMeIn package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.NotifyMeIn.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.OrderLabDiReferral test -->
+   <test name="chartprevisit.OrderLabDiReferral" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.OrderLabDiReferral Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.OrderLabDiReferral.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PatientHandOuts test -->
+   <test name="chartprevisit.PatientHandOuts" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.PatientHandOuts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientHandOuts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PatientMeds test -->
+   <test name="chartprevisit.PatientMeds" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name ="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.PatientMeds package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientMeds.*"/>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientMeds.SummaryMedication.*"/>
+    </packages>
+  </test>
+   
+   <!-- Chartprevisit.PrescribeMedication test -->
+   <test name="chartprevisit.PrescribeMedication" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.PrescribeMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PrescribeMedication.*"/>
+      </packages>
+   </test>
+
+   <!-- Chartprevisit PrescribeMedication Single -->
+   <test name="chartprevisit PrescribeMedication Single" parallel="classes" thread-count="1">
+   <!-- Execute at @Marqaa01 Single Thread-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4445" />
+   <groups>  
+    <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+   </run>
+   </groups>  
+   
+   <!-- Chartprevisit.PrescribeMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PrescribeMedication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PreventiveCare test -->
+   <test name="chartprevisit.PreventiveCare" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.PreventiveCare package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PreventiveCare.*"/>
+      </packages>
+   </test> 
+    
+  <!-- Chartprevisit.ProblemList test -->
+   <test name="chartprevisit.ProblemList" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.ProblemList package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ProblemList.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.ProviderHomePage test -->
+   <test name="chartprevisit.ProviderHomePage" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>
+	  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.ProviderHomePage Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ProviderHomePage.*"/>
+      </packages>
+   </test>
+   
+   
+   <!-- chartprevisit.QuickList test -->
+   <test name="chartprevisit.QuickList" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.QuickList package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.QuickList.*"/>
+      </packages>
+   </test>   
+   
+   <!-- chartprevisit.ReferralLetter test -->
+   <test name="chartprevisit.ReferralLetter" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.ReferralLetter package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ReferralLetter.*"/>
+      </packages>
+   </test>
+   
+   <!-- chartprevisit.SigningAuthority test -->
+   <test name="chartprevisit.SigningAuthority" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="US">    
+		      <include name="RegressionUS"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="USAccount">
+		      <include name="US"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="USAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.SigningAuthority package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SigningAuthority.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.SocialHistory test -->
+   <test name="chartprevisit.SocialHistory" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.SocialHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SocialHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.SummaryMedication test -->
+   <test name="chartprevisit.SummaryMedication" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Chartprevisit.SummaryMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SummaryMedication.*"/>
+     </packages>
+   </test>
+   
+   <!-- Chartprevisit TimeLine test -->
+   <test name="chartprevisit TimeLine" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />    
+   <groups>
+	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- chartprevisit TimeLine package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.TimeLine.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.UnMatchedItemsQueue test -->
+   <test name="chartprevisit.UnMatchedItemsQueue" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+   <!-- Chartprevisit.UnMatchedItemsQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.UnMatchedItemsQueue.*"/>
+     </packages>
+   </test>
+   
+   <!-- Chartprevisit.UnsignedEncounterQueue test -->
+   <test name="chartprevisit.UnsignedEncounterQueue" parallel="methods" thread-count="19">
+   <!-- Execute at @Marqaa06 -->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+   <!-- Chartprevisit.UnsignedEncounterQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.UnsignedEncounterQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Vitals test -->
+   <test name="chartprevisit.Vitals" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Chartprevisit.Vitals package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Vitals.*"/>
+      </packages>
+   </test>     
+   
+   
+   <!-- Billing testcase --> 
+     
+   <!-- Billing.adjustmentCodes test -->
+   <test name="Billing.AdjustmentCodes" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.adjustmentCodes package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.adjusmentCodes.*"/>
+      </packages>
+   </test>   
+      
+   <!-- Billing.adminStatement test -->
+   <test name="Billing.adminStatement" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.adjustmentCodes package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.adminstatement.*"/>
+      </packages>
+   </test>
+   
+    <!-- Billing.batch_eligibility test -->
+   <test name="Billing.batch_eligibility" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.batch_eligibility package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.batch_eligibility.*"/>
+      </packages>
+   </test>
+   
+    <!-- Billing.batchstatement test -->
+   <test name="Billing.batchstatement" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.adjustmentCodes package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.batchstatement.*"/>
+      </packages>
+   </test>
+  
+     
+   <!-- Billing.batchHistory test -->
+   <test name="Billing.batchHistory" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.billingHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.billingHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.catchEntry -->
+   <test name="Billing.ChargeEntry" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.ChargeEntryHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.chargeentry.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.catchEntryWorkQueue -->
+   <test name="Billing.ChargeEntryWorkQueue" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.ChargeEntryWorkQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.chargeentryworkqueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.feeSchedule -->
+   <test name="Billing.feeSchedule" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.feeSchedule package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.feeSchedule.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.payer Payments -->
+   <test name="Billing.payer_payments" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.payer_Payment -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.payer_payments.*"/>
+      </packages>
+   </test>                                         
+   
+   <!-- Billing.post patientPayment -->
+   <test name="Billing.postpatientpayments" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.postpatientPayment -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.postpatientpayments.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.serviceCode -->
+   <test name="Billing.serviceCode" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.serviceCode -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.serviceCode.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.statement_batch_review -->
+   <test name="Billing.statement_batch_review" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statement_batch_review -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.statement_batch_review.*"/>
+      </packages>
+   </test>
+   
+<!-- Billing.statementPreferences -->
+   <test name="Billing.statementPreferences" parallel="methods" thread-count="19">
+   <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statementpreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.statementpreferences.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.superbillentry -->
+   <test name="Billing.superbillentry" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statementpreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.superbillentry.*"/>
+      </packages>
+   </test>
+   
+   <!-- Billing.superBillSetUp -->
+   <test name="Billing.superBillSetUp" parallel="methods" thread-count="19">
+     <!-- Execute at Marqaa06 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.33.2.159" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	     
+	   <define name="US">    
+	      <include name="RegressionUS"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="USAccount">
+	      <include name="US"/>      
+	      <include name="Common"/>
+	    </define> 
+	  
+	    <run>
+	    	 <include name="USAccount"/>
+	    </run>
+	</groups>
+   
+    <!-- Billing.statementpreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.billing.superBillSetUp.*"/>
+    </packages>
+   </test>     
+   
+
+</suite>

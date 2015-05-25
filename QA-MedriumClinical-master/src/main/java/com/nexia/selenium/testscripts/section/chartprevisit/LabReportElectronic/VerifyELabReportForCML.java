@@ -1,0 +1,107 @@
+package com.nexia.selenium.testscripts.section.chartprevisit.LabReportElectronic;
+
+import java.io.IOException;
+import org.testng.Assert;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.nexia.selenium.genericlibrary.chartprevisit.AbstractChartPreVisit;
+import com.nexia.selenium.genericlibrary.chartprevisit.ChartPreVisitLib;
+import com.thoughtworks.selenium.Selenium;
+
+
+public class VerifyELabReportForCML extends AbstractChartPreVisit {
+	@Test(groups = {"DeferredCA","Approved", "Production","firefox", "iexplore", "safari", "default" }, description = "Test for File New Report thru Electronic Means" )
+	@Parameters( { "seleniumHost", "seleniumPort", "browser", "webSite", "userAccount"})
+	public void electronicLabReportWithMandatory(String seleniumHost, int seleniumPort,String browser, String webSite, String userAccount) throws Exception {
+		ClassName=this.getClass().getName().substring(39);	
+		MethodName= Thread.currentThread().getStackTrace()[1].getMethodName();
+		ChartPreVisitLib ElabData = new ChartPreVisitLib();
+		ElabData.workSheetName = "ElectronicFileLabReport";
+		ElabData.testCaseId = "TC_ELR_001";
+		ElabData.fetchChartPreVisitTestData();
+		electronicLabReport(seleniumHost, seleniumPort, browser, webSite, userAccount, ElabData);
+	}
+	
+	/**
+	 * electronicfileNewReport
+	 * function to electronic file new lab report
+	 * @param 		seleniumHost
+	 * @param 		seleniumPort
+	 * @param 		browser
+	 * @param 		webSite
+	 * @throws     IOException 
+	 * @since  	    August 09, 2013
+	 */
+	public boolean electronicLabReport(String seleniumHost, int seleniumPort,String browser, String webSite, String userAccount, ChartPreVisitLib ElabData) throws IOException{
+		Selenium selenium=null;
+		boolean returnValue=true;
+		try{
+								
+			//--------------------------------------------------------------------//
+			//  Step-1: Login to the application and search for the given patient //
+			//--------------------------------------------------------------------//
+			selenium = getSession(seleniumHost, seleniumPort, browser, webSite);
+			Assert.assertNotNull(selenium,"Could Not Retrive the New Selenium Session; More Details :" + ElabData.toString());
+			assertTrue(loginForNexiaFromProviderSite(selenium, ElabData.userAccount, ElabData.userName, ElabData.userPassword),"Login Failed ", selenium, ClassName, MethodName);
+			
+			//--------------------------------------------------------------------//
+			//  Step-2: Advanced search with Patient ID//
+			//--------------------------------------------------------------------//
+			
+			searchPatientNexiaForProviderHomePage(selenium,ElabData.patientId);
+			waitForPageLoad(selenium);
+			
+			
+			//--------------------------------------------------------------------//
+			//  Step-3: Delete Existing lab reports//
+			//--------------------------------------------------------------------//
+			assertTrue(deletelabReport(selenium,ElabData),"Deletion Failed", selenium, ClassName, MethodName);
+			waitForPageLoad(selenium);
+			
+			//--------------------------------------------------------------------//
+			//  Step-4: Perform the FTP Upload of the Electronic labs   		  //
+			//--------------------------------------------------------------------//
+						
+			ftpFileUpload1(selenium, webSite, ElabData);
+			waitForPageLoad(selenium);
+			waitForPageLoad(selenium);
+			waitForPageLoad(selenium);
+			waitForPageLoad(selenium);
+			waitForPageLoad(selenium);
+			
+			
+						
+			//--------------------------------------------------------------------//
+			//  Step-5: verify if the number of the labs are correct			  //
+			//--------------------------------------------------------------------//
+			/*Assert.assertTrue(selenium.isTextPresent(ElabData.numLabs), "Correct number of Labs is not Present");*/
+						
+			//--------------------------------------------------------------------//
+			//  Step-6: Search and Verify Results for a Lab						  //
+			//--------------------------------------------------------------------//
+					
+			
+			if(!verifyLabReport(selenium,ElabData)){
+				fail("Lab reports results are not displayed correctly; More Details :"+ ElabData.toString());
+				returnValue=false;
+			}else
+				return returnValue;
+			
+			/*assertTrue(type(selenium, searchBox,ElabData.patientId),"Cold not click the check box", selenium, ClassName, MethodName);
+			waitForPageLoad(selenium);
+			selenium.keyPress(searchBox, "\\13");
+						
+			if(getText(selenium,firstLabReport).contains(ElabData.abnormal))
+				returnValue=true;
+			else
+				return false;*/
+			
+						
+		}catch(RuntimeException e){
+			e.printStackTrace();
+			assertTrue(false,"Failed Due to the Exception; \n\t*) ExceptionDetails :"+e.getMessage()+"\n\t*)", selenium, ClassName, MethodName);
+		}
+		return returnValue;
+	}
+}

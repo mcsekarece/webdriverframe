@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Failed suite [Nexia Smoke Test QA5- Canada Account]]">
+  <parameter name="webSite" value="https://10.33.1.76:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="eh1480"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <test name="Nexia(failed)(failed)" parallel="methods">
+    <parameter name="webSite" value="https://10.33.1.76:8443/"/>
+    <parameter name="browser" value="*firefox"/>
+    <parameter name="userAccount" value="eh1480"/>
+    <parameter name="seleniumPort" value="4444"/>
+    <parameter name="seleniumHost" value="localhost"/>
+    <groups>
+      <run>
+        <include name="CanadaAccount"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.MedicalAndSurgicalHistory.CreateProcedureInEncounter">
+        <methods>
+          <include name="createProcedureWithFullDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.MedicalAndSurgicalHistory.CreateProcedureInEncounter -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.CreateEncounterAllergy">
+        <methods>
+          <include name="createAllergyWithHideDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.Allergies.CreateEncounterAllergy -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.Medication.CreateEncounterMedication">
+        <methods>
+          <include name="createEncounterMedicationWithFreetextDirection" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.Medication.CreateEncounterMedication -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.SocialHistory.CreateEncounterSocialHistory">
+        <methods>
+          <include name="createSocialHistoryWithFullDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.SocialHistory.CreateEncounterSocialHistory -->
+      <class name="com.nexia.selenium.testscripts.section.smoketest.VerifyPasswordResetSmoke">
+        <methods>
+          <include name="verifyForcePasswordResetForUser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.smoketest.VerifyPasswordResetSmoke -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.ProblemList.CreateProblemListInEncounter">
+        <methods>
+          <include name="createProblemListWithHideDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.ProblemList.CreateProblemListInEncounter -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.Injection.CreateEncounterInjection">
+        <methods>
+          <include name="createEncounterInjectionwithHideDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.Injection.CreateEncounterInjection -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.Immunization.CreateEncounterImmunization">
+        <methods>
+          <include name="createEncounterImmunizationWithMandatory" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.Immunization.CreateEncounterImmunization -->
+      <class name="com.nexia.selenium.testscripts.section.smoketest.VerifySecurityOptionForSmoke">
+        <methods>
+          <include name="verifySecurityOptionWithLimitedAccess" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.smoketest.VerifySecurityOptionForSmoke -->
+      <class name="com.nexia.selenium.testscripts.section.chartprevisit.FamilyHistory.CreateEncounterFamilyHistory">
+        <methods>
+          <include name="createFamilyHistory" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.chartprevisit.FamilyHistory.CreateEncounterFamilyHistory -->
+    </classes>
+  </test> <!-- Nexia(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Nexia Smoke Test QA5- Canada Account]] -->

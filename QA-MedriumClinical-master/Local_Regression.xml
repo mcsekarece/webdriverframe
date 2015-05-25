@@ -1,0 +1,101 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Medrium Selenium Automated QA Test">
+ <parameter name="webSite" value="https://108.161.43.83:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <parameter name="userAccount" value="CA2000"/>
+  
+   <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>   
+  
+  <test name="Nexia" junit="false" annotations="JDK" parallel="classes" thread-count="1">
+  
+ 
+   <classes>
+      <class name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.FlowSheetSectionView"/>	
+		<class name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.DeleteManageCareTemplate"/>	
+   		<class name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.PracticeLevelManagedCareTemplate"/>	
+    	<class name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.CreateManageCareTemplate"/>	
+   		<class name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.CreateExistingTemplate"/>
+   		<class name="com.nexia.selenium.testscripts.section.clinicalLists.common.VerifySortBySexAndName">
+   		
+   		
+   		 <methods>
+		<include name="verifySortBySexMale" />
+		</methods>   		
+   		</class>   	
+   		
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyCannotCompleteTaskInFollowUpAndRecallType"/>
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyAssigneComment"/>
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyAddAttachmentInGeneralTask"/>
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.EditTaskNotification"/>
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyCannotCompleteTaskWithCurrentUser"/>
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyCancelCanNotCompleteTaskWithCurrentUser"/>
+   		
+   		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.VerifyPDGViewAllSeriesDetails"/>	
+   		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.EditPDGSeries">
+   		<methods>
+		<include name="editScheduleSeries" />
+		</methods> 		
+   		</class>
+		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.VerifyAlphabeticalOrderInPickList">
+   		<methods>
+		<include name="alphabeticalOrderInPickList" />
+		</methods> 		
+   		</class>
+		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.VerifyCopyPDGSeries">
+   		<methods>
+		<include name="copyPDGSEries" />
+		</methods> 		
+   		</class>
+   		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.VerifyDefaultValueInScheduleSerie">
+   		<methods>
+		<include name="defaultValueInScheduleSeries" />
+		</methods> 		
+   		</class>
+   		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.VerifyLogoutFunctionsforUnfinishedItems">
+   		<methods>
+		<include name="verifyLogoutFunctionsforUnfinishedItems" />
+		</methods> 		
+   		</class>
+   		<class name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.VerifyNextAndBackButtonDetails">
+   		<methods>
+		<include name="backAndNextButoonInSeriesPage" />
+		</methods> 	
+		</class>
+   		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.CreatePatientTask">
+		<methods>
+		<include name="createPatientTaskWithUserOrUserRole" />
+		</methods>
+		</class>
+		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyShowDetailsInTaskNotification">
+		<methods>
+		<include name="showDetails" />
+		</methods>
+		</class>
+		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyReassignTask">
+		<methods>
+		<include name="reassignTaskWithDifferentRole" />
+		</methods>
+		</class>
+		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyPutOnHoldTaskWithCurrentUser">
+		<methods>
+		<include name="putOnHoldTaskWithCurrentUser" />
+		</methods>
+		</class>
+		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyCreateGeneralTask">
+		<methods>
+		<include name="verifyCreateGeneralTaskSameUser" />
+		</methods>
+		</class>
+		<class name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.VerifyCompletedTaskWithCurrentUser">
+		<methods>
+		<include name="completeTaskWithCurrentUser" />
+		</methods>
+		</class>
+		 	</classes>
+		  </test>
+		</suite>                                                             

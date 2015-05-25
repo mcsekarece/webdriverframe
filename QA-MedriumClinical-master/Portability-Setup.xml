@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia SetUp Scripts (Portability scripts)">
+  <parameter name="webSite" value="https://10.33.1.74:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="qb1486"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <test name="Nexia" parallel="methods">
+    <classes>
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePatientForMedication">
+        <methods>
+          <include name="CreatePatientForMedication" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePatientForMedication -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePortabilityForCdsAlerts">
+        <methods>
+          <include name="CreatePortabilityForCdsAlerts" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePortabilityForCdsAlerts -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePracticePortability">
+        <methods>
+          <include name="CreatePracticePortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePracticePortability -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortAssociateProviderForPractice">
+        <methods>
+          <include name="PortAssociateProviderForPractice" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortAssociateProviderForPractice -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortConsentsData">
+        <methods>
+          <include name="PortConsentsData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortConsentsData -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortExternalProvider">
+        <methods>
+          <include name="PortExternalProvider" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortExternalProvider -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProgramData">
+        <methods>
+          <include name="PortProgramData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProgramData -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProvidersPortability">
+        <methods>
+          <include name="PortProvidersPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProvidersPortability -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProvidersPortabilityCAView">
+        <methods>
+          <include name="PortProvidersPortabilityCAView" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProvidersPortabilityCAView -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortUserData">
+        <methods>
+          <include name="PortUserData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortUserData -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePortabilityForNPRequip">
+        <methods>
+          <include name="CreatePortabilityForNPRequip" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePortabilityForNPRequip -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePortabilityForNPRrooms">
+        <methods>
+          <include name="CreatePortabilityForNPRrooms" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePortabilityForNPRrooms -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePortabilityForNPRstaff">
+        <methods>
+          <include name="CreatePortabilityForNPRstaff" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePortabilityForNPRstaff -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreateVisitTypeUSView">
+        <methods>
+          <include name="CreateVisitTypeUSView" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreateVisitTypeUSView -->
+       <class name="com.nexia.selenium.testscripts.section.portability.CreateLocationHoursPortability">
+        <methods>
+          <include name="CreateLocationHoursPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreateLocationHoursPortability -->
+    </classes>
+  </test> 
+</suite> <!-- [Nexia Setup/Portability Scripts] -->

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia SetUp Scripts (Portability scripts) for QA3 (2.0 Release)">
+  <parameter name="webSite" value="https://nexia-dev6.nexia.local/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="CA2000"/>
+  <parameter name="seleniumHost" value="10.1.13.93"/>
+  <parameter name="seleniumPort" value="4444"/>
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>   
+  
+  <test name="Nexia Single" parallel="classes" thread-count="1">
+    <classes>      
+      <class name="com.nexia.selenium.testscripts.section.portability.CreateAdminPracticePortability">
+        <methods>
+          <include name="CreateAdminPracticePortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreateAdminPracticePortability -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortUserRoles">
+        <methods>
+          <include name="PortUserRoles" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortUserRoles -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProvidersPortabilityCAView">
+        <methods>
+          <include name="PortProvidersPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProvidersPortability -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortUserData">
+        <methods>
+          <include name="PortUserData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortUserData -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProgramData">
+        <methods>
+          <include name="PortProgramData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProgramData -->
+           
+    </classes>
+  </test>
+  
+  <test name="Nexia" parallel="methods" thread-count="4">
+    <classes>      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortExternalProvider">
+        <methods>
+          <include name="PortExternalProvider" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortExternalProvider -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortEnterpriseVariable">
+        <methods>
+          <include name="PortEnterpriseVariable" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortEnterpriseVariable -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortConsentsData">
+        <methods>
+          <include name="PortConsentsData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortConsentsData -->
+       <class name="com.nexia.selenium.testscripts.section.portability.CreateAdminSuperBillPortability">
+        <methods>
+          <include name="CreateAdminSuperBillPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreateAdminSuperBillPortability -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.CreateLocationHoursPortability">
+        <methods>
+          <include name="CreateLocationHoursPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreateLocationHoursPortability -->            
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePayerForFeeSchedule">
+        <methods>
+          <include name="CreatePayerForFeeSchedule" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePayerForFeeSchedule -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePayersForPortability">
+        <methods>
+          <include name="CreatePayersForPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePayersForPortability -->
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePayersForThePatient">
+        <methods>
+          <include name="CreatePayersForThePatient" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePayersForThePatient -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.CreatePostChargeForPatientPayment">
+        <methods>
+          <include name="CreatePostChargeForPatientPayment" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreatePostChargeForPatientPayment -->            
+      <class name="com.nexia.selenium.testscripts.section.portability.CreateServiceCodePortability">
+        <methods>
+          <include name="CreateServiceCodePortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.CreateServiceCodePortability -->      
+    </classes>
+  </test>
+       
+</suite> <!-- [Nexia Setup/Portability Scripts for QA3 (2.0 build)] -->

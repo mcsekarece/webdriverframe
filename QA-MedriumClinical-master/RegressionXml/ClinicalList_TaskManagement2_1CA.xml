@@ -1,0 +1,118 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--ClinicalList and Setting Testcases-->
+<suite name="Nexia 2.1 Clinical List CA Account" parallel="methods" thread-count="12">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="CA2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+       
+   <!-- Clincal List, CQM  Testcases -->
+     
+   <test name="clinicalLists">
+   <!-- Execute at @Marqaa03 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+     <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+	   
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.common.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.matchAll.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.matchDoNotInclude.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.matchOneOrMore.*"/>
+     </packages>
+ </test>
+ 
+        
+ <test name="MedicationReconciliation">
+   <!-- Execute at @Marqaa03 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+	   
+    <packages>      
+      <package name="com.nexia.selenium.testscripts.section.clinicalLists.medicationReconciliation.*"/>
+     </packages>
+  </test>      
+   
+   
+  <!-- Scheduling Settings Package -->    
+        
+
+  <!-- TaskManagment PatientTask test -->
+
+   <test name="TaskManagment PatientTask">
+   <!-- Execute at Marqaa03 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+    
+  <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.taskManagment.PatientTask -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.*"/>
+      </packages>
+   </test>   
+
+  
+         
+   
+</suite>

@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nexia Smoke Test Canada Account- Stage">
+  <parameter name="webSite" value="https://nexiaemr.com/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="seleniumHost" value="10.33.3.87"/>
+  <parameter name="seleniumPort" value="6666"/>
+  <parameter name="userAccount" value="eh1480" />  
+      
+    <test name="Nexia" parallel="methods" thread-count="8">    
+    <groups>  
+		<define name="CA">    
+		      <include name="SmokeCA"/>           
+		    </define>
+    
+		   <define name="Common">    
+		      <include name="Smoke"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="Common"/>
+		      <include name="CA"/>
+		  </define>
+		  		 
+	</groups>    
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.smoketest.*"/>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MedInteractionWarning.*"/>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.*"/>      
+    </packages>
+    
+  </test> <!-- Nexia -->
+  
+  
+  
+</suite> <!-- [Medrium Selenium Automated QA Test Smoke Test]] -->

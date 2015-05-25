@@ -1,0 +1,125 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--ClinicalList and Setting Testcases-->
+<suite name="Nexia 2.1 Clinical Settings CA Account" parallel="methods" thread-count="12">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="CA2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+ 
+ 
+   <!-- Flow Sheets -->
+
+   <test name="clinicalsettings.Flow Sheets" parallel="classes" thread-count="1">
+   
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>	  
+  
+  	<define name="SingleThread">    
+	      <include name="SingleThread"/>           
+	   </define>	     
+	   
+	   <define name="SingleThread">    
+	      <include name="SingleThreadCA"/>           
+	   </define>	     
+    		      
+	 
+	    <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CAAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	      <include name="SingleThread"/>      
+	      <include name="SingleThreadCA"/>	      
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CAAccount"/>
+	    </run>
+       
+   </groups>  
+   
+   <!-- CDM Flow Sheets Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.cdmflowsheets.*"/>
+      </packages>
+   </test>
+ 
+ 
+   <!-- Clinical settings Encounter Template Package -->
+
+   <test name="clinicalsettings.EncounterTemplate" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa03 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4445" /> 
+   <groups>	  
+   <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadCA"/>
+	</run>
+       
+   </groups>  
+   
+   <!-- Clinicalsettings.encounter Template Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.encounterTemplate.*"/>
+      </packages>
+   </test>
+   
+       
+   
+   <test name="clinicalsettings.MedInteractionWarning" parallel="classes" thread-count="1">
+   <!-- Execute at Marqaa03 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4445" /> 
+   <groups>	  
+   
+       <define name="SingleThread">    
+	      <include name="SingleThread"/>           
+	   </define>	     
+	   
+	   <define name="SingleThread">    
+	      <include name="SingleThreadCA"/>           
+	   </define>	     
+    		      
+	 
+	    <define name="CA">    
+	      <include name="RegressionCA"/>           
+	    </define>
+	    
+	     <define name="Common">    
+	      <include name="Regression"/>           
+	    </define>
+	  
+	    <define name="CAAccount">
+	      <include name="CA"/>      
+	      <include name="Common"/>
+	      <include name="SingleThread"/>      
+	      <include name="SingleThreadCA"/>	      
+	    </define> 
+	  
+	    <run>
+	    	 <include name="CAAccount"/>
+	    </run>
+	</groups>  
+   
+   <!-- Clinicalsettings.MedInteractionWarning Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.clinicalsettings.MedInteractionWarning.*"/>
+      </packages>
+   </test> 
+           
+   
+</suite>

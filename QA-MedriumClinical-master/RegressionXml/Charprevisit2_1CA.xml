@@ -1,0 +1,1494 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 2.1 CharPrevisit CA Account" parallel="methods" thread-count="17">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="CA2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+   
+  <!-- Chartprevisit  Testcases -->
+   
+   <!-- Chartprevisit.Allergies Test -->
+   <test name="chartprevisit.Allergies">
+   <!-- Execute at @Marqaa01 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.Allergies Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.*"/>
+      </packages>
+   </test>
+   
+   
+ <!-- Chartprevisit Allergies SingleThread Test -->
+   <test name="chartprevisit Allergies SingleThread" parallel="classes" thread-count="1">
+   <!-- Execute at @Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4445" />
+   <groups>	  
+	  <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadCA"/>
+	</run> 
+   </groups>  
+   
+   <!-- Chartprevisit.Allergies Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Allergies.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.CcdExport Test -->
+   <test name="chartprevisit.CcdExport">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.CcdExport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.CcdExport.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.ChartDisclosure Test -->
+   <test name="chartprevisit.ChartDisclosure">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.ChartDisclosure Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ChartDisclosure.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.CorrespondenceReport Test -->
+   <test name="chartprevisit.CorrespondenceReport">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.CorrespondenceReport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.correspondencereport.*"/>
+      </packages>
+  </test>
+  
+   <!-- Chartprevisit.CoSign Test -->
+   <test name="chartprevisit.CoSign">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.CoSign Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.cosign.*"/>
+      </packages>
+   </test>
+   
+  <!-- Chartprevisit CustomizationSummary Package -->
+   <test name="Chartprevisit CustomizationSummary">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit CustomizationSummary -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.CustomizationSummary.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit CustomizationSummary Package -->
+   <test name="Chartprevisit CustomizationSummary">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit CustomizationSummary -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.CustomizationSummary.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit DiagnosticTestReport Package -->
+   <test name="Chartprevisit DiagnosticRestReport">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit DiagnosticTestReport -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.diagnostictestreport.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit EMRSecurity Package -->
+   <test name="Chartprevisit EMRSecurity">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit EMRSecurity -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EMRSecurity.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.EncounterAddEdit Package -->
+   <test name="chartprevisit.EncounterAddEdit">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.EncounterAddEdit Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterAddEdit.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.EncounterOverall test -->
+   <test name="chartprevisit.EncounterOverall">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- Chartprevisit.EncounterOverall Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterOverall.*"/>
+      </packages>
+   </test>  
+   
+   <!-- Chartprevisit.EncounterOverall test -->
+   <test name="chartprevisit.EncounterQueue">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- Chartprevisit.EncounterQueue Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterQueue.*"/>
+      </packages>
+   </test>  
+   
+   <!-- Chartprevisit EncounterReference test -->
+   <test name="chartprevisit.EncounterReference">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- Chartprevisit EncounterReference Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterReference.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit EncounterRunWizard test -->
+   <test name="chartprevisit.EncounterRunWizard">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- Chartprevisit EncounterRunWizard Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.EncounterRunWizard.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit ExportCapabilities test -->
+   <test name="chartprevisit.ExportCapabilities">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- Chartprevisit ExportCapabilities Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.exportcapabilities.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.FamilyHistory Test -->
+   <test name="chartprevisit.FamilyHistory">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+      
+	
+   <!-- Chartprevisit.FamilyHistory Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.FamilyHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.GrowthCharts Test -->
+   <test name="chartprevisit.GrowthCharts">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.GrowthCharts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.GrowthCharts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Immunization Test -->
+   <test name="chartprevisit.Immunization">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.Immunization Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Immunization.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Import Capabilities Test -->
+   <test name="chartprevisit.Import Capabilities">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.Import Capabilities Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.importcapabilities.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Injection Test -->
+   <test name="chartprevisit.Injection">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.Injection Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Injection.*"/>
+      </packages>
+   </test>
+   
+  <!-- Chartprevisit.LabReFile Test -->
+   <test name="chartprevisit.LabReFile">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.LabReFile Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabReFile.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.LabReportQueue Test -->
+   <test name="chartprevisit.LabReportQueue">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+      
+   <!-- Chartprevisit.LabReportQueue Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabReportQueue.*"/>
+      </packages>
+   </test>
+   
+   
+   <!-- Chartprevisit.LabRequisition Test -->
+   <test name="chartprevisit.LabRequisition">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+      
+   <!-- Chartprevisit.LabRequisition Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabRequisition.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.LabResult Test -->
+   <test name="chartprevisit.LabResult">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+      
+   <!-- Chartprevisit.LabResult Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabResult.*"/>
+      </packages>
+   </test>
+   
+    <!-- Chartprevisit.LabResultFillingManual Test -->
+   <test name="chartprevisit.LabResultFillingManual">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+   
+   <!-- Chartprevisit.LabResultFillingManual Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.LabResultFillingManual.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedicalAndSurgicalHistory Test -->
+   <test name="chartprevisit.MedicalAndSurgicalHistory">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.MedicalAndSurgicalHistory Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedicalAndSurgicalHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Medication Test -->
+   <test name="chartprevisit.Medication">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.Medication Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Medication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedsQueue test -->
+   <test name="chartprevisit.MedsQueue">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.MedsQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedsQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MedWarnings test -->
+   <test name="chartprevisit.MedWarnings">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>   
+   
+   <!-- Chartprevisit.MedWarnings package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MedWarnings.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.MergeCharts test -->
+   <test name="chartprevisit.MergeCharts">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>   
+   
+   <!-- Chartprevisit.MergeCharts package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.MergeCharts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.NotifyMeIn test -->
+   <test name="chartprevisit.NotifyMeIn">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>   
+   
+   <!-- Chartprevisit.NotifyMeIn package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.NotifyMeIn.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.OrderLabDiReferral test -->
+   <test name="chartprevisit.OrderLabDiReferral">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.OrderLabDiReferral Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.OrderLabDiReferral.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PatientHandOuts test -->
+   <test name="chartprevisit.PatientHandOuts">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.PatientHandOuts Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientHandOuts.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PatientMeds test -->
+   <test name="chartprevisit.PatientMeds">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.PatientMeds package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientMeds.*"/>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PatientMeds.SummaryMedication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PrescribeMedication test -->
+   <test name="chartprevisit.PrescribeMedication">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.PrescribeMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PrescribeMedication.*"/>
+      </packages>
+   </test>
+
+   <!-- Chartprevisit PrescribeMedication Single -->
+   <test name="chartprevisit PrescribeMedication Single" parallel="classes" thread-count="1">
+   <!-- Execute at @Marqaa01 Single Thread-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4445" />
+   <groups>  
+    <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadCA"/>
+   </run>
+   </groups>  
+   
+   <!-- Chartprevisit.PrescribeMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PrescribeMedication.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.PreventiveCare test -->
+   <test name="chartprevisit.PreventiveCare">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.PreventiveCare package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.PreventiveCare.*"/>
+      </packages>
+   </test>
+   
+   
+  <!-- Chartprevisit.ProblemList test -->
+   <test name="chartprevisit.ProblemList">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.ProblemList package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ProblemList.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.ProviderHomePage test -->
+   <test name="chartprevisit.ProviderHomePage">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.ProviderHomePage Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ProviderHomePage.*"/>
+      </packages>
+   </test>
+   
+   <!-- chartprevisit.QuickList test -->
+   <test name="chartprevisit.QuickList">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.QuickList package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.QuickList.*"/>
+      </packages>
+   </test>
+   
+   <!-- chartprevisit.ReferralLetter test -->
+   <test name="chartprevisit.ReferralLetter">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.ReferralLetter package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.ReferralLetter.*"/>
+      </packages>
+   </test>
+   
+   <!-- chartprevisit.SigningAuthority test -->
+   <test name="chartprevisit.SigningAuthority">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.SigningAuthority package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SigningAuthority.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.SocialHistory test -->
+   <test name="chartprevisit.SocialHistory">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.SocialHistory package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SocialHistory.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.SummaryMedication test -->
+   <test name="chartprevisit.SummaryMedication">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- Chartprevisit.SummaryMedication package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.SummaryMedication.*"/>
+      </packages>
+   </test>      
+   
+   <!-- Chartprevisit TimeLine test -->
+   <test name="chartprevisit TimeLine">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />    
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- chartprevisit TimeLine package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.TimeLine.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.UnMatchedItemsQueue test -->
+   <test name="chartprevisit.UnMatchedItemsQueue">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+      
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>   
+      
+   <!-- Chartprevisit.UnMatchedItemsQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.UnMatchedItemsQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.UnsignedEncounterQueue test -->
+   <test name="chartprevisit.UnsignedEncounterQueue">
+   <!-- Execute at @Marqaa01 -->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" />
+      
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>   
+      
+   <!-- Chartprevisit.UnsignedEncounterQueue package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.UnsignedEncounterQueue.*"/>
+      </packages>
+   </test>
+   
+   <!-- Chartprevisit.Vitals test -->
+   <test name="chartprevisit.Vitals">
+     <!-- Execute at Marqaa01 Multiple Grid-->
+   <parameter name="seleniumHost" value="10.1.13.93" />
+   <parameter name="seleniumPort" value="4444" /> 
+   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+    <!-- Chartprevisit.Vitals package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.chartprevisit.Vitals.*"/>
+      </packages>
+   </test>
+   
+</suite>

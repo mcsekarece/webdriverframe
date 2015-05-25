@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 1.5 Auto Review Only testcases - US Account">
+ 
+  <parameter name="webSite" value="https://nexia-qa5.nexiaemr.com:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="US2000" />
+    
+  <test name="Nexia ReviewOnly" parallel="classes" thread-count="5">  
+  <groups>		      
+	<run>
+	   <include name="Review"/>
+	</run>
+  </groups>   
+  <packages> 
+  
+  <!-- Smoke Testcases -->
+  <package name="com.nexia.selenium.testscripts.section.smoketest.*"/>  
+  <!-- Demographics Testcases -->
+  <package name="com.nexia.selenium.testscripts.section.demographics.*"/>  
+  <!-- Operation  Testcases -->  
+ <!-- <package name="com.nexia.selenium.testscripts.section.operations.*"/> -->  
+  <!-- Clincal List, MU and CQM  Testcases -->
+  <package name="com.nexia.selenium.testscripts.section.clinicalLists.*"/>
+  <package name="com.nexia.selenium.testscripts.section.clinicalsettings.*"/>
+  <!-- Charprevisit Testcases -->
+   <package name="com.nexia.selenium.testscripts.section.chartprevisit.*"/>
+   <!-- taskManagment.PatientTask Testcases -->
+   <package name="com.nexia.selenium.testscripts.section.taskManagment.PatientTask.*"/>
+   <!-- TemplateSetup daySheet Template -->
+   <package name="com.nexia.selenium.testscripts.section.templateSetup.daySheetTemplate.*"/>
+   
+  </packages>
+  </test> <!-- Nexia -->
+  
+  <!-- System Settings Settings Package -->
+    
+   <!-- System settings test -->
+   <test name="System Settings" parallel="classes" thread-count="5">
+   <parameter name="userAccount" value="US9999" />   
+    <groups>		      
+	  <run>
+	      <include name="Review"/>
+	  </run>
+    </groups>
+   
+    <!-- System settings Test -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.*"/>
+    </packages>
+   </test>
+  
+      
+  <!-- Scheduling Settings Package -->
+    
+   <!-- Schedule Settings test -->
+   <test name="Schedule Settings" parallel="classes" thread-count="5">
+   <parameter name="userAccount" value="US2000" />   
+    <groups>		      
+	  <run>
+	      <include name="Review"/>
+	  </run>
+    </groups>
+   
+    <!-- schedulingsettings.CalendarPreferences -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.*"/>
+    </packages>
+   </test>   
+   
+   
+</suite>

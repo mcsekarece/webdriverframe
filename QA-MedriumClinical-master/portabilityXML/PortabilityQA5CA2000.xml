@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia SetUp Scripts (Portability scripts) for QA5 (1.5 Release) - Canada Account">
+  <parameter name="webSite" value="https://10.33.1.76:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="CA2000"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <test name="Nexia" parallel="classes" thread-count="1">
+	<classes>	 
+	 <class name="com.nexia.selenium.testscripts.section.portability.PortUserRoles">
+        <methods>
+          <include name="PortUserRoles" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortUserData -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProvidersPortability">
+        <methods>
+          <include name="PortProvidersPortability" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProgramData -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortUserData">
+        <methods>
+          <include name="PortUserData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortProvidersPortability -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortProgramData">
+        <methods>
+          <include name="PortProgramData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortExternalProvider -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortExternalProvider">
+        <methods>
+          <include name="PortExternalProvider" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortEnterpriseVariable -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortEnterpriseVariable">
+        <methods>
+          <include name="PortEnterpriseVariable" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortConsentsData -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortConsentsData">
+        <methods>
+          <include name="PortConsentsData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortAssociateProviderForPractice -->     
+    </classes>
+  </test> 
+</suite> <!-- [Nexia Setup/Portability Scripts for QA5 (1.5 build) - Canada Account] -->

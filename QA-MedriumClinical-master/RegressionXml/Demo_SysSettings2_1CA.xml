@@ -1,0 +1,992 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 2.1 Demographics and System Setting CA Account" parallel="methods" thread-count="14">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="10.1.13.92" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="CA2000" />
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+   <!-- Demographics.Cases Test -->
+  <test name="Demographics.Cases">  
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />	   
+	   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups> 	   
+  
+     <!-- Demographics.Cases Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Cases.*"/>
+    </packages>
+  </test> 
+   
+  <!-- Demographics.Consents Test -->
+  <test name="demographics.Consents">
+  
+ <!-- Execute at @Marqaa04 Multiple Threads -->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+	   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+  
+     <!-- Demographics.Consents Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Consents.*"/>
+    </packages>
+  </test>  
+  
+  <!-- Demographics.Contacts Test -->
+  <test name="demographics.Contacts">
+   <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" /> 
+	   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>	  
+	<!-- Demographics.Consents Package -->      
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Contacts.*"/>
+    </packages>
+  </test>  
+  
+  <!-- Demographics Testcases HealthCareTeam -->
+    
+  <test name="demographics.HealthCareTeam">
+  <!-- Execute at @Marqaa04 Multiple Threads-->
+  <parameter name="seleniumHost" value="10.1.13.92" />
+  <parameter name="seleniumPort" value="4444" />	
+	 <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+  <!-- Demographics Testcases HealthCareTeam -->
+  
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.HealthCareTeam.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.Household Test -->
+   
+   <test name="demographics.Household">
+     <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />    
+	   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  	<!-- Demographics.Household package -->   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Household.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Identifiers Test -->
+   
+   <test name="demographics.Identifiers">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+	 <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+	<!-- Demographics.Identifiers package -->   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Identifiers.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Demographics.LoginPage Test -->
+      
+   <test name="demographics.LoginPage">
+      <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.LoginPage Package -->
+   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.LoginPage.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.MySettings Test -->
+   
+   <test name="demographics.MySettings">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.MySettings Package-->
+   
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.MySettings.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Notes Test-->
+      
+   <test name="demographics.Notes">
+      <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" /> 
+	    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+   
+  <!-- Demographics.Notes Package-->    
+   <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Notes.*"/>
+   </packages>     
+   </test>
+   
+   <!-- Demographics.patientCheckinInfo Test-->
+   
+   <test name="demographics.patientCheckinInfo" parallel="classes" thread-count="10">
+      <!-- Execute at Marqaa04 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.patientCheckinInfo Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientCheckinInfo.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.patientSearch Test-->
+   
+   <test name="demographics.patientSearch">
+   <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />    
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.patientSearch Package-->
+    
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientSearch.*"/>
+      </packages>
+   </test>   
+   
+   <!-- Demographics.patientTimeLine Test-->
+   
+   <test name="demographics.patientTimeLine">
+   
+   <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.patientTimeLine Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.patientTimeLine.*"/>
+      </packages>
+   </test>
+   
+      
+   <!-- Demographics.Payers Test-->   
+   <test name="demographics.Payers">
+   
+      <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+    
+    <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.payers Package-->
+  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Payers.*"/>
+      </packages>
+   </test>         
+
+   <!-- Demographics.Programs Test-->
+   
+   <test name="demographics.Programs">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+     <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+     
+  <!-- Demographics.Programs Package-->
+   
+   <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Programs.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.Referral Test-->
+   
+   <test name="demographics.Referral">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups> 
+   
+  <!-- Demographics.Referral Package-->  
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.Referral.*"/>
+      </packages>
+   </test>
+   
+   <!-- Demographics.SignoutFlow Test-->
+   
+   <test name="demographics.SignoutFlow">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups> 
+  <!-- Demographics.SignoutFlow Package -->
+     
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.SignoutFlow.*"/>
+      </packages>
+   </test>
+   
+  <!-- Demographics.SocioEconomic Test-->
+   
+   <test name="demographics.SocioEconomic">
+      <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+  <!-- Demographics.SocioEconomic Package -->
+   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.SocioEconomic.*"/>
+  </packages>
+   </test>
+   
+   <!-- Demographics.unfinishedItem Test-->
+   
+   <test name="demographics.unfinishedItem">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+      <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups> 
+  <!-- demographics.unfinishedItem Package -->   
+  <packages>
+      <package name="com.nexia.selenium.testscripts.section.demographics.unfinishedItem.*"/>
+  </packages>
+  </test>
+   
+ <!-- File Documents Testcases-->
+   
+  <test name="fileDocuments" parallel="classes" thread-count="1">
+  <!-- Execute at @Marqaa04 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />  
+  <groups>		      
+	 <run>
+	   <include name="SingleThread"/>
+	   <include name="SingleThreadUS"/>
+	 </run>
+   </groups>   
+ 
+ <!-- fileDocuments Package -->
+   <packages>	  
+	   <package name="com.nexia.selenium.testscripts.section.filedocuments.*"/>   
+    </packages>   
+  </test>  
+
+  <!-- SystemSetting  Testcases -->  
+      
+  <!-- SystemSetting.AddressBook Test -->  
+      
+   <test name="systemsettings.AddressBook">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" /> 
+     <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+   
+   <!-- SystemSetting.AddressBook Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.AddressBook.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.Consents Test -->
+   
+   <test name="systemsettings.Consents">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+    <!-- SystemSetting.Consents Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.Consents.*"/>
+    </packages>
+   </test>
+   
+   <!-- SystemSetting.Directories Test -->
+   
+   <test name="systemsettings.Directories">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- SystemSetting.Directories Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.Directories.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.EnterpriseVariables Test -->
+   <test name="systemsettings.EnterpriseVariables">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- SystemSetting.EnterpriseVariables Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.EnterpriseVariables.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.ExternalProviders Test -->
+   <test name="systemsettings.ExternalProviders">
+      <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" /> 
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+
+    <!-- SystemSetting.ExternalProviders Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.ExternalProviders.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.HealthCareTeam Test -->
+   <test name="systemsettings.HealthCareTeam">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- SystemSetting.HealthCareTeam Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.HealthCareTeam.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.IdentifiersGroups Test -->
+   <test name="systemsettings.IdentifiersGroups">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+	  
+   <!-- SystemSetting.IdentifiersGroups Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.IdentifiersGroups.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.IdentifiersTypes Test -->
+   <test name="systemsettings.IdentifiersTypes">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+	
+   <!-- SystemSetting.IdentifiersTypes Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.IdentifiersTypes.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.MandatoryFields Test -->
+   <test name="systemsettings.MandatoryFields">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+     <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+	
+   <!-- SystemSetting.MandatoryFields Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.MandatoryFields.*"/>
+      </packages>
+   </test>   
+   
+   <!-- SystemSetting.MandatoryFields Test -->
+   <test name="systemsettings.OrganizationalStructures">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+     <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+	
+   <!-- SystemSetting.OrganizationalStructure Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.OrganizationalStructures.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.OrganizationalStructures.AdminPractice.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.OrganizationalStructures.AssociatedPayer.*"/>
+    </packages>
+   </test>   
+   
+   <!-- SystemSetting.PasswordRules Test -->
+   <test name="systemsettings.PasswordRules">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>  
+   
+   <!-- SystemSetting.PasswordRules Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.PasswordRules.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.PatientImport Test -->
+   <test name="systemsettings.PatientImport">
+   <!-- Execute at @Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   <!-- SystemSetting.PatientImport Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.PatientImport.*"/>
+      </packages>
+   </test>
+   
+   <!-- SystemSetting.UserRoles Test -->
+   <test name="systemsettings.UserRoles">
+      <!-- Execute at Marqaa04 Multiple Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4444" />   
+   <groups>  
+		   <define name="CA">    
+		      <include name="RegressionCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Regression"/>           
+		    </define>
+		  
+		    <define name="CanadaAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CanadaAccount"/>
+		    </run>
+	  </groups>
+   
+   <!-- SystemSetting.UserRoles Package -->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.UserRoles.*"/>
+      </packages>
+   </test>          
+  
+</suite>

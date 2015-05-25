@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Medrium Selenium Automated QA Test">
+ <parameter name="webSite" value="https://108.161.43.83:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <parameter name="userAccount" value="CA2000"/>
+  <test name="Nexia" junit="false" annotations="JDK" parallel="classes" thread-count="3">
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.templateSetup.daysheettemplate.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.consents.*"/>
+      <package name="com.nexia.selenium.testscripts.section.systemsettings.addressbook.*"/>	
+   	</packages>
+  </test>
+</suite>                                                             

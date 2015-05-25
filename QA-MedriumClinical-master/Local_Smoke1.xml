@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Medrium Selenium Automated QA Test" preserve-order="false" parallel="tests">
+  <parameter name="webSite" value="https://108.161.43.83:8443/"/>
+   <parameter name="browser" value="*firefox"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <parameter name="userAccount" value="CA2000" /> 
+  
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners> 
+  
+  <test name="Nexia Smoke" parallel="methods" thread-count="8">
+ 
+   <groups>  
+		   <define name="CA">    
+		      <include name="SmokeCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="Smoke"/>           
+		    </define>
+		  
+		    <define name="CAAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <run>
+		    	 <include name="CAAccount"/>
+		    </run>
+	</groups>  
+    
+    <packages>
+      
+        <!-- Smoke Testcases -->
+	  <package name="com.nexia.selenium.testscripts.section.smoketest.*"/>  	  
+	  <!-- Demographics Testcases -->
+	  <package name="com.nexia.selenium.testscripts.section.demographics.*"/>	    
+	  <!-- Operation  Testcases -->  
+	  <package name="com.nexia.selenium.testscripts.section.operations.*"/>	   
+         
+    </packages>    
+  </test><!-- Nexia -->
+  
+</suite> <!-- [Medrium Selenium Automated QA Test Smoke Test]] -->

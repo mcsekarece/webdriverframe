@@ -1,0 +1,103 @@
+package com.nexia.selenium.testscripts.section.chartprevisit.ProblemList;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.nexia.selenium.genericlibrary.chartprevisit.AbstractChartPreVisit;
+import com.nexia.selenium.genericlibrary.chartprevisit.ChartPreVisitLib;
+import com.thoughtworks.selenium.Selenium;
+
+public class VerifySaveProblemList extends AbstractChartPreVisit{
+	@Test(groups = {"Regression","Approved","firefox", "iexplore", "safari", "default" }, description = "Verify save functionality for problem list")
+	@Parameters( { "seleniumHost", "seleniumPort", "browser", "webSite", "userAccount"})
+	public void verifySaveProblemList(String seleniumHost, int seleniumPort,String browser, String webSite, String userAccount) throws Exception {
+		ChartPreVisitLib proData = new ChartPreVisitLib();
+		proData.workSheetName = "CreateProblemList";
+		proData.testCaseId = "TC_CPL_034";
+		proData.fetchChartPreVisitTestData();
+		ClassName=this.getClass().getName().substring(39);	
+		MethodName= Thread.currentThread().getStackTrace()[1].getMethodName();
+		addProblemList(seleniumHost, seleniumPort, browser, webSite, userAccount, proData);
+	}
+	/**
+	 * addProblemList
+	 * Verify save functionality for problem list
+	 * @param 		seleniumHost
+	 * @param 		seleniumPort
+	 * @param 		browser
+	 * @param 		webSite
+	 * @throws IOException 
+	 * @since  	    Nov 05,2012
+	 */
+
+	public boolean addProblemList(String seleniumHost, int seleniumPort,String browser, String webSite, String userAccount, ChartPreVisitLib proData) throws IOException{
+		Selenium selenium=null;
+		boolean returnValue=true;
+		try{
+			//--------------------------------------------------------------------//
+			//  Step-1: Login to the application and search for the given patient //
+			//--------------------------------------------------------------------//
+			selenium = getSession(seleniumHost, seleniumPort, browser, webSite);
+			Assert.assertNotNull(selenium,"Could Not Retrive the New Selenium Session; More Details :" + proData.toString());
+			assertTrue(loginForNexiaFromProviderSite(selenium, userAccount, proData.userName, proData.userPassword),"Login Failed ",selenium, ClassName, MethodName);
+			
+			//--------------------------------------------------------------------//
+			//  Step-2: Advanced search with Patient ID//
+			//--------------------------------------------------------------------//
+			searchPatientNexiaForProviderHomePage(selenium,proData.patientId);
+			waitForPageLoad(selenium);
+			assertTrue(click(selenium,lnkencounterTab),"Could not click the encounter tab",selenium, ClassName, MethodName);
+			assertTrue(deleteAllEncounters(selenium,proData),"Deletion Failed",selenium, ClassName, MethodName);
+			//--------------------------------------------------------------------//
+			//  Step-3: Navigate to Encounter and Pop up//
+			//--------------------------------------------------------------------//
+			assertTrue(goToBeginEncounter(selenium),"Navigation Failed",selenium, ClassName, MethodName);			
+			waitForPageLoad(selenium);
+			
+			
+			selenium.clickAt(lnkBeginEncounterAction,"");
+			selenium.focus(lnkBeginEncounterAction);			
+			selenium.fireEvent(lnkBeginEncounterAction,"keypress");		
+			waitForPageLoad(selenium);
+			waitForPageLoad(selenium);
+			assertTrue(click(selenium, lblEncounterSave),"Could not click on encounter save",selenium, ClassName, MethodName);
+			waitForPageLoad(selenium);
+			
+			assertTrue(click(selenium,lnkProblemList),"Could not click the problem list link;More Details",selenium, ClassName, MethodName);
+			waitForPageLoad(selenium);
+			//--------------------------------------------------------------------//
+			//  Step-4: Delete All existing Problem List//
+			//--------------------------------------------------------------------//
+			assertTrue(deleteAllProblemList(selenium, proData),"Deletion faied",selenium, ClassName, MethodName);
+			waitForPageLoad(selenium);
+			
+			//--------------------------------------------------------------------//
+			//  Step-5: Add Problem list//
+			//--------------------------------------------------------------------//
+			assertTrue(createProblemList(selenium,proData,userAccount),"Problem List Creation failed",selenium, ClassName, MethodName);
+			waitForPageLoad(selenium);
+			
+			//--------------------------------------------------------------------//
+			//  Step-6: Verify Save button                                      //
+			//--------------------------------------------------------------------//
+			assertTrue(isElementPresent(selenium,chkPbmShowBox),"Could not find the check box more Details;"+proData.toString(),selenium, ClassName, MethodName);
+			assertTrue(click(selenium,chkPbmShowBox),"Could not click the check box; More Details:"+proData.toString(),selenium, ClassName, MethodName);
+			assertTrue(click(selenium,btnSave),"Could not click the save button;More Details:"+proData.toString(),selenium, ClassName, MethodName);
+			click(selenium,btnSave);
+			
+			//Verify whether the created Problem List is not present in summary page after click on save
+			if(getText(selenium, lblNoProblem).equalsIgnoreCase("No problem list added")){
+				return true;
+			}else
+				return false;
+		}
+		catch(RuntimeException e){
+			e.printStackTrace();
+			assertTrue(false,"Failed Due to the Exception; \n\t*) ExceptionDetails :"+e.getMessage()+"\n\t*)", selenium, ClassName, MethodName);
+		}
+		return returnValue;
+	}
+}

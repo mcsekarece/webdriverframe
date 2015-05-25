@@ -1,0 +1,62 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nexia AdvanceSmoke Test 2.1 Build -Dev6 CA Account @10.1.13.93" preserve-order="false" parallel="tests">
+  <parameter name="webSite" value="https://nexia-dev6.nexia.local/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="seleniumHost" value="10.1.13.92"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <parameter name="userAccount" value="CA2000" />
+    
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  
+  <test name="Nexia Advance Smoke" parallel="methods" thread-count="10">  
+    <groups>  
+		   <define name="CA">    
+		      <include name="AdvancedSmokeCA"/>           
+		    </define>
+		    
+		     <define name="Common">    
+		      <include name="AdvancedSmoke"/>           
+		    </define>
+		  
+		    <define name="CAAccount">
+		      <include name="CA"/>      
+		      <include name="Common"/>
+		    </define>
+		      
+		    <define name="SingleThreadUnique">
+		      <include name="SingleThread"/>      
+		      <include name="SingleThreadUS"/>
+		
+      		  <include name="SingleThreadCA"/>  
+ 			</define>
+		    <run>
+		    	 <include name="CAAccount"/>
+		    	 <exclude name="SingleThreadUnique"/>
+		    </run>
+	</groups>  
+    
+    <packages>    	
+       <package name="com.nexia.selenium.testscripts.section.demographics.*"/>	    
+	   <!-- Operation  Testcases -->  
+	   <package name="com.nexia.selenium.testscripts.section.operations.*"/>	    
+	   <!-- Clincal List, MU and CQM  Testcases -->
+	   <package name="com.nexia.selenium.testscripts.section.clinicalLists.*"/>
+	   <package name="com.nexia.selenium.testscripts.section.clinicalsettings.*"/>	  
+	   <!-- Charprevisit Testcases -->
+	   <package name="com.nexia.selenium.testscripts.section.chartprevisit.*"/>	   
+	   <!-- taskManagment.PatientTask Testcases -->
+	   <package name="com.nexia.selenium.testscripts.section.taskManagment.patient_Task.*"/>	   
+	   <!-- TemplateSetup daySheet Template -->
+	   <package name="com.nexia.selenium.testscripts.section.templateSetup.daysheettemplate.*"/>   
+       <package name="com.nexia.selenium.testscripts.section.schedulingsettings.*"/>
+       <package name="com.nexia.selenium.testscripts.section.systemsettings.*"/>     
+       <package name="com.nexia.selenium.testscripts.section.billing.*"/>       	
+    </packages>
+        
+  </test> <!-- Nexia -->         
+     
+  
+</suite> <!-- [Nexia AdvanceSmoke Test 1.6 Build - CA Account] -->

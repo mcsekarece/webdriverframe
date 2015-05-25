@@ -1,0 +1,75 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Nexia 2.1 CA Account Schedule Setting">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/" />
+  <parameter name="seleniumHost" value="localhost" />
+  <parameter name="seleniumPort" value="4444" />
+  <parameter name="browser" value="*firefox" />
+  <parameter name="userAccount" value="CA2000" />
+  
+  <listeners>
+     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+           
+  <!-- schedulingsettings.PDGQueue -->
+
+  <test name="schedulingsettings.PDGQueue" parallel="classes" thread-count="1">
+    <!-- Execute at Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4445" />
+       
+   <groups>	     
+      <run>
+         <include name="SingleThread"/>
+         <include name="SingleThreadCA"/>
+         <exclude name="RegressionUS"/>
+         
+       </run>	
+         
+   </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.schedulingsettings.pDGQueue -->
+    <packages>
+       <package name="com.nexia.selenium.testscripts.section.schedulingsettings.pDGQueue.*"/>
+    </packages>
+  </test>
+
+  <!-- schedulingsettings.PDGRecordAttendance -->
+  <test name="schedulingsettings.PDGRecordAttendance" parallel="classes" thread-count="1">
+    <!-- Execute at Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4445" />    
+   <groups>	     
+  	   <run>
+    		<include name="SingleThread"/>
+    		<include name="SingleThreadCA"/>
+   		</run>	  
+   </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.schedulingsettings.pDGRecordAttendance-->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.pDGRecordAttendance.*"/>
+    </packages>
+ </test>
+
+   <!-- schedulingsettings.programGroups -->
+
+   <test name="schedulingsettings.programGroups" parallel="classes" thread-count="1">
+      <!-- Execute at Marqaa01 Single Threads-->
+   <parameter name="seleniumHost" value="10.1.13.92" />
+   <parameter name="seleniumPort" value="4445" />
+       
+   <groups>	     
+   	<run>
+    	<include name="SingleThread"/>
+    	<include name="SingleThreadCA"/>
+   	</run>	  
+   </groups>
+   
+    <!-- com.nexia.selenium.testscripts.section.schedulingsettings.programGroups-->
+    <packages>
+      <package name="com.nexia.selenium.testscripts.section.schedulingsettings.programGroups.*"/>
+    </packages>    
+</test>        
+   
+</suite>

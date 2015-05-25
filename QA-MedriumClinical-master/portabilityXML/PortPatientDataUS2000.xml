@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia SetUp Scripts (Portability scripts) to Port Patient Data (1.5 Release) - US Account">
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="US2000"/>
+  <parameter name="seleniumHost" value="10.33.2.159"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <test name="Nexia" parallel="methods" thread-count="4">
+    <classes>      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientData1_35">
+        <methods>
+          <include name="PortPatientData1_35" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientData1_35 -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientData36_70">
+        <methods>
+          <include name="PortPatientData36_70" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientData36_70 -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientData71_105">
+        <methods>
+          <include name="PortPatientData71_105" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientData71_105 -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientData106_132">
+        <methods>
+          <include name="PortPatientData106_132" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientData106_132 -->            
+    </classes>
+  </test> 
+</suite> <!-- [Nexia Setup/Portability Scripts to Port Patient Data (1.5 build)] -->

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="[Nexia SetUp Scripts (Port Patient Data scripts) for 2.0 Release - Canada Account">
+  <parameter name="webSite" value="https://ca.nightingalemd.com/"/>
+  <parameter name="browser" value="*firefox"/>
+  <parameter name="userAccount" value="CA2000"/>
+  <parameter name="seleniumHost" value="10.1.13.93"/>
+  <parameter name="seleniumPort" value="4444"/>
+  <test name="Nexia" parallel="methods" thread-count="5">
+	<classes>	 
+	 <class name="com.nexia.selenium.testscripts.section.portability.PortPatientDataCA1_35">
+        <methods>
+          <include name="PortPatientDataCA1_35" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientDataCA1_35 -->      
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientDataCA36_70">
+        <methods>
+          <include name="PortPatientDataCA36_70" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientDataCA36_70 -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientDataCA71_105">
+        <methods>
+          <include name="PortPatientDataCA71_105" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientDataCA71_105 -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientDataCA106_129">
+        <methods>
+          <include name="PortPatientDataCA106_129" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientDataCA106_129 -->
+      <class name="com.nexia.selenium.testscripts.section.portability.PortPatientDataForCharprevisit">
+        <methods>
+          <include name="PortPatientDataForCharprevisit" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nexia.selenium.testscripts.section.portability.PortPatientDataForCharprevisit -->                 
+    </classes>
+  </test> 
+</suite> <!-- [Nexia Setup/Portability Scripts to Port Patient Data (2.0 build) - Canada Account] -->
