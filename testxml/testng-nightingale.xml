@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Selenium Automation Framework" allow-return-values="true">
+   
+    <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+  <parameter name="webSite" value="https://108.161.43.79:8443/"/>  
+  <parameter name="userAccount" value="US2000"/> 
+    <parameter name="browser" value="FIREFOX"/>
+
+
+
+ <test name="NexiaDriver">
+    <packages>
+      <package name="com.projectname.test.functional.demographics.patientcreation.*"/>	
+   	</packages>
+   </test>  
+
+
+   
+<!--   <test name="NexiaDriver">
+  <classes>
+      <class name="com.projectname.test.functional.demographics.patientcreation.CreateNewPatient">
+        <methods>
+          <include name="createPatient" invocation-numbers="0"/>
+        </methods>
+     </class>   
+     </classes>      
+     </test>   -->
+   
+   <!--  <test name="com.projectname.test.functional.modulename">
+    <packages>
+      <package name="com.projectname.test.functional.modulename1.*"/>
+    </packages>
+	</test>
+	
+	 <test name="com.projectname.test.functional.modulename1">
+    <packages>
+      <package name="com.projectname.test.functional.modulename2.*"/>
+    </packages>
+	</test> -->
+	
+</suite>
+
+ <!-- [Selenium Automated QA Test]] --> 

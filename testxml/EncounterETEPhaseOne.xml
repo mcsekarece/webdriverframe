@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="EncounterEndToEnd" allow-return-values="true">
+   
+    <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>       
+  
+  <parameter name="webSite" value="https://nexia-qa3.nexia.local:8443/"/>
+  <parameter name="seleniumHost" value="localhost"/>
+  <parameter name="seleniumPort" value="4444"/>    
+  <parameter name="userAccount" value="CA2000"/> 
+  <parameter name="browser" value="firefox"/> 
+
+ <test name="Encounter End to End Phase One Dependent Test" parallel="classes" thread-count="1"> 
+ 
+      <!--Encounter End to End Phase I Dependent  Test cases including cancel delete scenarios-->
+      
+  <classes>
+      <class name="com.projectname.test.functional.clinicalsettings.practiceLibrary.EncounterEndToEndOne">
+        <methods>
+          <include name="verifyEncounterEndToEndOne" invocation-numbers="0"/>
+        </methods>
+     </class>     
+    
+     <class name="com.projectname.test.functional.clinicalsettings.practiceLibrary.EncounterEndToEndSecond">
+        <methods>
+          <include name="verifyEncounterEndToEndSecond" invocation-numbers="0"/>
+        </methods>
+     </class>     
+     
+      <class name="com.projectname.test.functional.clinicalsettings.practiceLibrary.EncounterEndToEndThird">
+        <methods>
+          <include name="verifyEncounterEndToEndThird" invocation-numbers="0"/>
+        </methods>
+     </class>     
+     
+      <class name="com.projectname.test.functional.clinicalsettings.practiceLibrary.EncounterEndToEndFour">
+        <methods>
+          <include name="verifyEncounterEndToEndFour" invocation-numbers="0"/>
+        </methods>
+     </class>     
+     
+      <class name="com.projectname.test.functional.clinicalsettings.practiceLibrary.EncounterEndToEndFive">
+        <methods>
+          <include name="verifyEncounterEndToEndFive" invocation-numbers="0"/>
+        </methods>
+     </class>     
+     
+          
+    
+     </classes>  
+     
+   </test>  
+</suite>
+
